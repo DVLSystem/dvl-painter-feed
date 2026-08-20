@@ -27,6 +27,12 @@
       </div>
       <div id="sourceFilters" class="filter-row"></div>
       <div id="tagFilters" class="filter-row tag-row"></div>
+      <div id="ageFilters" class="filter-row age-row">
+        <button class="filter-btn active" data-age="ALL">전체 기간</button>
+        <button class="filter-btn" data-age="1">24시간</button>
+        <button class="filter-btn" data-age="3">3일</button>
+        <button class="filter-btn" data-age="7">7일</button>
+      </div>
     </section>
 
     <main>
@@ -38,7 +44,7 @@
         </div>
         <div class="hero-stat">
           <strong id="newCount">0</strong>
-          <span>NEW</span>
+          <span>24H NEW</span>
         </div>
       </section>
 
@@ -49,6 +55,7 @@
             <button id="showAllPainters" class="text-btn">ALL</button>
           </div>
           <div id="paintersList" class="painters-list"></div>
+          <div id="painterProfile" class="painter-profile hidden"></div>
         </aside>
 
         <section class="feed-panel panel">
@@ -78,6 +85,7 @@
       <a class="thumb-wrap" target="_blank" rel="noopener noreferrer">
         <img class="thumb" alt="" loading="lazy" />
         <span class="source-badge"></span>
+        <span class="fresh-badge hidden"></span>
       </a>
       <div class="card-body">
         <div class="card-topline">
