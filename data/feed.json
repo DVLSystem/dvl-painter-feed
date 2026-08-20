@@ -1,5 +1,25 @@
 [
   {
+    "id": "yt:Q0XEVdQOP2k",
+    "painterId": "angel-giraldez",
+    "source": "YouTube",
+    "title": "How to paint BLACK TEMPLAR ( warhammer 40K)",
+    "description": "🟡 GOLD SPONSORS 🟡 -Gamer Grass https://www.gamersgrass.com/ -Redgrass Games https://www.redgrassgames.com/?utm_source=AngelGiraldeZ -Artis Opus brushes: https://www.artis-opus.com/ - Harder & Steenbeck: https://harder-airbrush.net/?sca_ref=4445838.6nCBk08KgY -Acrylicos Vallejo:https://acrylicosvallejo.com/ 🔵 SILVER SPONSORS -Sunward Hobbies: https://www.sunw",
+    "url": "https://www.youtube.com/watch?v=Q0XEVdQOP2k",
+    "thumbnail": "https://i2.ytimg.com/vi/Q0XEVdQOP2k/hqdefault.jpg",
+    "publishedAt": "2026-08-20T17:15:10Z",
+    "tags": [
+      "Space Marine",
+      "Gold",
+      "Steel",
+      "Airbrush",
+      "Tutorial",
+      "Sci-Fi",
+      "NMM",
+      "Infinity"
+    ]
+  },
+  {
     "id": "yt:8rInOXsf0i0",
     "painterId": "sergio-calvo",
     "source": "YouTube",
@@ -1043,25 +1063,6 @@
     ]
   },
   {
-    "id": "yt:JgiUcTE82Lw",
-    "painterId": "angel-giraldez",
-    "source": "YouTube",
-    "title": "How to Paint Bases for StarCraft Miniatures.",
-    "description": "🟡 GOLD SPONSORS 🟡 -Gamer Grass https://www.gamersgrass.com/ -Redgrass Games https://www.redgrassgames.com/?utm_source=AngelGiraldeZ -Artis Opus brushes: https://www.artis-opus.com/ - Harder & Steenbeck: https://harder-airbrush.net/?sca_ref=4445838.6nCBk08KgY -Acrylicos Vallejo:https://acrylicosvallejo.com/ 🔵 SILVER SPONSORS Racing Colors ( PACK DE AEROGRAFIA",
-    "url": "https://www.youtube.com/watch?v=JgiUcTE82Lw",
-    "thumbnail": "https://i3.ytimg.com/vi/JgiUcTE82Lw/hqdefault.jpg",
-    "publishedAt": "2026-06-18T17:17:44Z",
-    "tags": [
-      "Gold",
-      "Steel",
-      "Airbrush",
-      "Tutorial",
-      "Sci-Fi",
-      "NMM",
-      "Infinity"
-    ]
-  },
-  {
     "id": "yt:l8ehBfTQrnA",
     "painterId": "craftworld-studio",
     "source": "YouTube",
@@ -1076,6 +1077,22 @@
       "NMM",
       "Atmosphere",
       "Display"
+    ]
+  },
+  {
+    "id": "webmap:angel-giraldez:https-www-angelgiraldez-com-en-categoria-producto-books",
+    "painterId": "angel-giraldez",
+    "source": "Website",
+    "title": "Books archivos - Angel Giraldez",
+    "description": "It takes time to be great. Becoming a master is just the begining",
+    "url": "https://www.angelgiraldez.com/en/categoria-producto/books/",
+    "thumbnail": "",
+    "publishedAt": "2026-06-02T07:33:28Z",
+    "tags": [
+      "Airbrush",
+      "Sci-Fi",
+      "NMM",
+      "Infinity"
     ]
   },
   {
@@ -1583,6 +1600,22 @@
       "Space Marine",
       "NMM",
       "Weathering"
+    ]
+  },
+  {
+    "id": "webmap:angel-giraldez:https-www-angelgiraldez-com-en-miniature-painting",
+    "painterId": "angel-giraldez",
+    "source": "Website",
+    "title": "Miniature Painting",
+    "description": "Professional custom miniature painting service. Discover a painting studio for Warhammer and wargames, offering high-quality pieces with detailed finishes.",
+    "url": "https://www.angelgiraldez.com/en/miniature-painting/",
+    "thumbnail": "https://www.angelgiraldez.com/wp-content/uploads/2025/01/galeria-pintura-miniaturas-01.webp",
+    "publishedAt": "2024-12-05T09:20:58Z",
+    "tags": [
+      "Airbrush",
+      "Sci-Fi",
+      "NMM",
+      "Infinity"
     ]
   },
   {
