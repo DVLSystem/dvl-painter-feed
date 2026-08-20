@@ -267,6 +267,142 @@ def meta_value(page: str, key: str) -> str:
     return ""
 
 
+
+
+def page_metadata(raw: bytes, url: str) -> dict:
+    page = raw.decode("utf-8", errors="ignore")
+    title = clean(meta_value(page, "og:title"))
+    if not title:
+        m = re.search(r"<title[^>]*>(.*?)</title>", page, flags=re.I | re.S)
+        title = clean(m.group(1)) if m else ""
+    desc = clean(meta_value(page, "og:description") or meta_value(page, "description"))
+    thumb = meta_value(page, "og:image")
+    published = ""
+    for pat in [
+        r'<meta[^>]+property=["\']article:published_time["\'][^>]+content=["\']([^"\']+)',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']article:published_time["\']',
+        r'"datePublished"\s*:\s*"([^"]+)"',
+    ]:
+        m = re.search(pat, page, flags=re.I)
+        if m:
+            published = iso_date(m.group(1)); break
+    return {"title": title, "description": desc, "thumbnail": thumb, "publishedAt": published, "url": url}
+
+
+def parse_sitemap(raw: bytes) -> tuple[list[str], list[tuple[str, str]]]:
+    """Return (child sitemap URLs, page URL + lastmod entries). Namespace agnostic."""
+    try:
+        root = ET.fromstring(raw)
+    except Exception:
+        return [], []
+    children, pages = [], []
+    tag = root.tag.split("}")[-1].lower()
+    if tag == "sitemapindex":
+        for node in root:
+            if node.tag.split("}")[-1].lower() != "sitemap":
+                continue
+            loc = lastmod = ""
+            for child in node:
+                n = child.tag.split("}")[-1].lower()
+                if n == "loc": loc = clean(child.text or "")
+                elif n == "lastmod": lastmod = clean(child.text or "")
+            if loc: children.append(loc)
+    elif tag == "urlset":
+        for node in root:
+            if node.tag.split("}")[-1].lower() != "url":
+                continue
+            loc = lastmod = ""
+            for child in node:
+                n = child.tag.split("}")[-1].lower()
+                if n == "loc": loc = clean(child.text or "")
+                elif n == "lastmod": lastmod = clean(child.text or "")
+            if loc: pages.append((loc, iso_date(lastmod)))
+    return children, pages
+
+
+SITEMAP_POSITIVE = (
+    "/product/", "/products/", "/gallery/", "/miniature", "/miniatures/",
+    "/workshop", "/workshops/", "/course", "/courses/", "/tutorial",
+    "/blog/", "/news/", "/project", "/projects/", "/downloads/",
+)
+SITEMAP_NEGATIVE = (
+    "/privacy", "/legal", "/terms", "/contact", "/cart", "/checkout",
+    "/account", "/login", "/shop/", "/store/", "/category/", "/tag/",
+    "/author/", "/feed", "/wp-json", "/wp-admin",
+)
+
+
+def relevant_site_url(url: str, cfg: dict) -> bool:
+    path = urllib.parse.urlsplit(url).path.lower()
+    includes = [x.lower() for x in cfg.get("sitemapInclude", [])]
+    excludes = [x.lower() for x in cfg.get("sitemapExclude", [])]
+    if any(x in path for x in excludes) or any(x in path for x in SITEMAP_NEGATIVE):
+        return False
+    if includes:
+        return any(x in path for x in includes)
+    return any(x in path for x in SITEMAP_POSITIVE)
+
+
+def sitemap_items(p: dict) -> list[dict]:
+    cfg = p.get("sources", {}) or {}
+    if not cfg.get("websiteSitemapAuto"):
+        return []
+    home = clean(p.get("website", ""))
+    if not home:
+        return []
+    parts = urllib.parse.urlsplit(home)
+    root = f"{parts.scheme}://{parts.netloc}/"
+    candidates = cfg.get("sitemaps", []) or [
+        urllib.parse.urljoin(root, "wp-sitemap.xml"),
+        urllib.parse.urljoin(root, "sitemap.xml"),
+    ]
+    all_pages: list[tuple[str, str]] = []
+    visited = set()
+    queue = list(candidates)
+    # Follow sitemap indexes, but cap work to keep Actions lightweight.
+    while queue and len(visited) < 24:
+        sm = queue.pop(0)
+        if sm in visited: continue
+        visited.add(sm)
+        try:
+            child_maps, pages = parse_sitemap(fetch(sm))
+        except Exception as exc:
+            print(f"WARN sitemap {p['name']} {sm}: {exc}")
+            continue
+        for child in child_maps:
+            if urllib.parse.urlsplit(child).netloc == parts.netloc and child not in visited:
+                queue.append(child)
+        all_pages.extend(pages)
+    # Keep only useful content, requiring a source-provided lastmod date.
+    filtered = [(u, d) for u, d in all_pages
+                if d and urllib.parse.urlsplit(u).netloc == parts.netloc and relevant_site_url(u, cfg)]
+    filtered.sort(key=lambda x: x[1], reverse=True)
+    out = []
+    for url, lastmod in filtered[:MAX_PER_SOURCE * 2]:
+        try:
+            meta = page_metadata(fetch(url), url)
+        except Exception as exc:
+            print(f"WARN page {p['name']} {url}: {exc}")
+            continue
+        title = meta["title"]
+        if not title:
+            continue
+        # Prefer true publication time when present; otherwise sitemap lastmod is explicit site metadata.
+        published = meta["publishedAt"] or lastmod
+        stable = re.sub(r"\W+", "-", url).strip("-")[-90:]
+        desc = meta["description"]
+        out.append({
+            "id": f"webmap:{p['id']}:{stable}", "painterId": p["id"], "source": "Website",
+            "title": title, "description": desc[:360], "url": url,
+            "thumbnail": meta["thumbnail"], "publishedAt": published,
+            "tags": auto_tags(title, desc, p.get("specialties", [])),
+        })
+        if len(out) >= MAX_PER_SOURCE:
+            break
+    if out:
+        print(f"SITEMAP {p['name']}: {len(out)}")
+    return out
+
 def artstation_items(p: dict) -> list[dict]:
     profile = (p.get("sources", {}) or {}).get("artstation", "")
     if not profile:
@@ -316,13 +452,20 @@ def parse_ts(item: dict) -> datetime:
 def main():
     painters = json.loads(PAINTERS.read_text(encoding="utf-8"))
     existing = json.loads(FEED.read_text(encoding="utf-8")) if FEED.exists() else []
-    generated_prefixes = ("yt:", "web:", "art:")
+    generated_prefixes = ("yt:", "web:", "webmap:", "art:")
     manual = [x for x in existing if not str(x.get("id", "")).startswith(generated_prefixes)]
     generated = []
     for p in painters:
-        ys = youtube_items(p); ws = website_items(p); ars = artstation_items(p)
+        ys = youtube_items(p)
+        rss = website_items(p)
+        sm = sitemap_items(p)
+        # Keep ArtStation optional. Known blocked profiles can disable it in painters.json.
+        ars = artstation_items(p) if (p.get("sources", {}) or {}).get("artstationEnabled", False) else []
+        # Deduplicate website entries by URL when RSS and sitemap overlap.
+        web_by_url = {x.get("url"): x for x in rss + sm if x.get("url")}
+        ws = list(web_by_url.values())
         generated += ys + ws + ars
-        print(f"{p['name']}: YouTube {len(ys)}, Website {len(ws)}, ArtStation {len(ars)}")
+        print(f"{p['name']}: YouTube {len(ys)}, Website {len(ws)} (RSS {len(rss)} + Sitemap {len(sm)}), ArtStation {len(ars)}")
     # Deduplicate by id; later item wins, then sort newest first.
     by_id = {x.get("id"): x for x in manual + generated if x.get("id")}
     merged = list(by_id.values())
