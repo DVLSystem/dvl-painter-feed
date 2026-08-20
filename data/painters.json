@@ -68,8 +68,13 @@
     "patreon": "https://www.patreon.com/sergiocalvominiatures",
     "website": "https://sergiocalvominiatures.com/",
     "sources": {
-      "websiteRssAuto": true,
-      "artstation": "https://sergiocalvo.artstation.com/projects"
+      "websiteRssAuto": false,
+      "websiteSitemapAuto": true,
+      "sitemapInclude": [
+        "/product/",
+        "/gallery/",
+        "/kickstarter"
+      ]
     }
   },
   {
@@ -88,7 +93,15 @@
     "patreon": "",
     "website": "https://www.angelgiraldez.com/en/",
     "sources": {
-      "websiteRssAuto": true
+      "websiteRssAuto": false,
+      "websiteSitemapAuto": true,
+      "sitemapInclude": [
+        "/miniature",
+        "/courses/",
+        "/books/",
+        "/presents/",
+        "/wp-content/uploads/"
+      ]
     }
   },
   {
@@ -160,7 +173,13 @@
     "patreon": "",
     "website": "https://www.romanlappat.com/",
     "sources": {
-      "websiteRssAuto": true
+      "websiteRssAuto": false,
+      "websiteSitemapAuto": true,
+      "sitemapInclude": [
+        "/miniatures/",
+        "/workshops/",
+        "/downloads/"
+      ]
     }
   },
   {
