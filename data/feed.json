@@ -1,20 +1,5 @@
 [
   {
-    "id": "demo-1",
-    "painterId": "jose-davinci",
-    "source": "YouTube",
-    "title": "Demo · Face painting study",
-    "description": "실제 채널 ID를 painters.json에 입력하면 GitHub Action이 최신 YouTube 영상을 이 자리에 자동으로 갱신합니다.",
-    "url": "https://www.youtube.com/results?search_query=Jose+Da+Vinci+miniature+painting",
-    "thumbnail": "https://images.unsplash.com/photo-1601379327928-bedfaf9da2d0?auto=format&fit=crop&w=900&q=80",
-    "publishedAt": "2026-08-20T08:00:00Z",
-    "tags": [
-      "Face",
-      "Glazing",
-      "Tutorial"
-    ]
-  },
-  {
     "id": "yt:xxDrEitK-9A",
     "painterId": "jose-davinci",
     "source": "YouTube",
@@ -46,21 +31,6 @@
       "Volume",
       "NMM",
       "Capibases"
-    ]
-  },
-  {
-    "id": "demo-2",
-    "painterId": "richard-gray",
-    "source": "YouTube",
-    "title": "Demo · Space Marine armour reference",
-    "description": "NMM, 아머 볼륨, 엣지 하이라이트 같은 주제별 태그로 모아보는 예시 카드입니다.",
-    "url": "https://www.youtube.com/results?search_query=Richard+Gray+miniature+painting",
-    "thumbnail": "https://images.unsplash.com/photo-1614728263952-84ea256f9679?auto=format&fit=crop&w=900&q=80",
-    "publishedAt": "2026-08-19T12:30:00Z",
-    "tags": [
-      "Space Marine",
-      "NMM",
-      "Armour"
     ]
   },
   {
@@ -97,21 +67,6 @@
       "Glazing",
       "Faces",
       "Brushwork"
-    ]
-  },
-  {
-    "id": "demo-3",
-    "painterId": "juan-sanz",
-    "source": "Reference",
-    "title": "Demo · Ork skin colour study",
-    "description": "YouTube 외의 레퍼런스도 feed.json에 직접 추가할 수 있습니다.",
-    "url": "https://www.youtube.com/results?search_query=Juan+Sanz+miniature+painting",
-    "thumbnail": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=900&q=80",
-    "publishedAt": "2026-08-18T11:00:00Z",
-    "tags": [
-      "Ork",
-      "Skin",
-      "Display"
     ]
   },
   {
