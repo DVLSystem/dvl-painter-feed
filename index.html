@@ -55,7 +55,6 @@
             <button id="showAllPainters" class="text-btn">ALL</button>
           </div>
           <div id="paintersList" class="painters-list"></div>
-          <div id="painterProfile" class="painter-profile hidden"></div>
         </aside>
 
         <section class="feed-panel panel">
@@ -64,12 +63,18 @@
               <h3>LATEST FEED</h3>
               <p id="feedStatus" class="muted small"></p>
             </div>
-            <div class="view-tabs">
-              <button class="tab active" data-view="latest">LATEST</button>
-              <button class="tab" data-view="saved">SAVED</button>
+            <div class="feed-controls">
+              <div class="view-tabs" aria-label="피드 종류">
+                <button class="tab active" data-view="latest">LATEST</button>
+                <button class="tab" data-view="saved">SAVED</button>
+              </div>
+              <div class="display-tabs" aria-label="보기 방식">
+                <button class="display-btn active" data-display="list" title="리스트 보기">☰ <span>LIST</span></button>
+                <button class="display-btn" data-display="gallery" title="갤러리 보기">▦ <span>GALLERY</span></button>
+              </div>
             </div>
           </div>
-          <div id="feedList" class="feed-list"></div>
+          <div id="feedList" class="feed-list list-view"></div>
           <div id="emptyState" class="empty-state hidden">
             <div class="empty-icon">✦</div>
             <h3>표시할 항목이 없습니다</h3>
@@ -79,6 +84,12 @@
       </section>
     </main>
   </div>
+
+  <div id="profileBackdrop" class="profile-backdrop hidden"></div>
+  <aside id="profileDrawer" class="profile-drawer" aria-hidden="true">
+    <button id="closeProfileBtn" class="drawer-close" title="닫기">×</button>
+    <div id="painterProfile"></div>
+  </aside>
 
   <template id="feedCardTemplate">
     <article class="feed-card">
