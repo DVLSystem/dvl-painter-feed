@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
-"""Fetch YouTube channel RSS feeds and merge them into data/feed.json.
-No API key required. Add youtubeChannelId values in data/painters.json.
+"""Fetch painter YouTube feeds and merge them into data/feed.json.
+
+No API key is required.
+- If youtubeChannelId exists, it is used directly.
+- If only a YouTube @handle/user URL exists, the script attempts to resolve the
+  canonical UC... channel id from the public channel page, then reads YouTube RSS.
+
+Painters with no YouTube channel still remain available as profiles/reference links.
 """
 from __future__ import annotations
 import json, re, urllib.request, xml.etree.ElementTree as ET
@@ -18,13 +24,41 @@ NS = {
     "media": "http://search.yahoo.com/mrss/",
 }
 
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151 Safari/537.36"
+
 def fetch(url: str) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": "DVL-Painter-Feed/1.0"})
-    with urllib.request.urlopen(req, timeout=20) as r:
+    req = urllib.request.Request(url, headers={
+        "User-Agent": UA,
+        "Accept-Language": "en-US,en;q=0.9",
+    })
+    with urllib.request.urlopen(req, timeout=25) as r:
         return r.read()
 
 def clean(text: str) -> str:
     return re.sub(r"\s+", " ", text or "").strip()
+
+def resolve_channel_id(youtube_url: str) -> str:
+    if not youtube_url:
+        return ""
+    m = re.search(r"youtube\.com/channel/(UC[\w-]{20,})", youtube_url)
+    if m:
+        return m.group(1)
+    try:
+        html = fetch(youtube_url).decode("utf-8", errors="ignore")
+    except Exception as exc:
+        print(f"WARN resolve {youtube_url}: {exc}")
+        return ""
+    patterns = [
+        r'"channelId":"(UC[\w-]{20,})"',
+        r'"externalId":"(UC[\w-]{20,})"',
+        r'<meta itemprop="channelId" content="(UC[\w-]{20,})"',
+        r'youtube\.com/channel/(UC[\w-]{20,})',
+    ]
+    for pattern in patterns:
+        m = re.search(pattern, html)
+        if m:
+            return m.group(1)
+    return ""
 
 def main():
     painters = json.loads(PAINTERS.read_text(encoding="utf-8"))
@@ -35,13 +69,20 @@ def main():
     for p in painters:
         cid = clean(p.get("youtubeChannelId", ""))
         if not cid:
+            cid = resolve_channel_id(clean(p.get("youtube", "")))
+            if cid:
+                print(f"Resolved {p['name']}: {cid}")
+        if not cid:
+            print(f"SKIP {p['name']}: no resolvable YouTube channel")
             continue
+
         url = f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}"
         try:
             root = ET.fromstring(fetch(url))
         except Exception as exc:
             print(f"WARN {p['name']}: {exc}")
             continue
+
         for entry in root.findall("atom:entry", NS)[:MAX_PER_PAINTER]:
             video_id = entry.findtext("yt:videoId", default="", namespaces=NS)
             title = clean(entry.findtext("atom:title", default="", namespaces=NS))
@@ -65,7 +106,7 @@ def main():
                 "url": href,
                 "thumbnail": thumb,
                 "publishedAt": published,
-                "tags": p.get("specialties", [])[:3],
+                "tags": p.get("specialties", [])[:4],
             })
 
     merged = manual + youtube_items
@@ -73,7 +114,7 @@ def main():
         try:
             return datetime.fromisoformat(item.get("publishedAt", "").replace("Z", "+00:00"))
         except Exception:
-            return datetime(1970,1,1,tzinfo=timezone.utc)
+            return datetime(1970, 1, 1, tzinfo=timezone.utc)
     merged.sort(key=ts, reverse=True)
     FEED.write_text(json.dumps(merged, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Updated {FEED}: {len(youtube_items)} YouTube + {len(manual)} manual items")
