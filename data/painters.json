@@ -1,0 +1,77 @@
+[
+  {
+    "id": "juan-sanz",
+    "name": "Juan Sanz",
+    "country": "Spain",
+    "specialties": [
+      "Display",
+      "Skin",
+      "NMM"
+    ],
+    "youtubeChannelId": "",
+    "youtube": "https://www.youtube.com/results?search_query=Juan+Sanz+miniature+painting",
+    "instagram": "",
+    "patreon": "",
+    "website": ""
+  },
+  {
+    "id": "jose-davinci",
+    "name": "Jose Da Vinci",
+    "country": "Spain",
+    "specialties": [
+      "Glazing",
+      "Faces",
+      "NMM"
+    ],
+    "youtubeChannelId": "",
+    "youtube": "https://www.youtube.com/results?search_query=Jose+Da+Vinci+miniature+painting",
+    "instagram": "",
+    "patreon": "",
+    "website": ""
+  },
+  {
+    "id": "richard-gray",
+    "name": "Richard Gray",
+    "country": "UK",
+    "specialties": [
+      "Space Marine",
+      "NMM",
+      "Weathering"
+    ],
+    "youtubeChannelId": "",
+    "youtube": "https://www.youtube.com/results?search_query=Richard+Gray+miniature+painting",
+    "instagram": "",
+    "patreon": "",
+    "website": ""
+  },
+  {
+    "id": "sergio-calvo",
+    "name": "Sergio Calvo",
+    "country": "Spain",
+    "specialties": [
+      "Display",
+      "Volume",
+      "NMM"
+    ],
+    "youtubeChannelId": "",
+    "youtube": "https://www.youtube.com/results?search_query=Sergio+Calvo+miniature+painting",
+    "instagram": "",
+    "patreon": "",
+    "website": ""
+  },
+  {
+    "id": "angel-giraldez",
+    "name": "Angel Giraldez",
+    "country": "Spain",
+    "specialties": [
+      "Airbrush",
+      "Sci-Fi",
+      "NMM"
+    ],
+    "youtubeChannelId": "UCQVY6ZD9YjxwPzJqJ6DcHgA",
+    "youtube": "https://www.youtube.com/@AngelGiraldeZ",
+    "instagram": "",
+    "patreon": "",
+    "website": ""
+  }
+]
