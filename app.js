@@ -28,7 +28,7 @@ function relativeDate(dateStr){
 }
 function freshness(item){ const h=ageHours(item.publishedAt); return h<=24?'NEW':h<=72?'3D':h<=168?'7D':''; }
 
-function renderAll(){ renderPainters(); renderProfile(); renderFilters(); renderFeed(); renderSummary(); renderDisplayButtons(); }
+function renderAll(){ renderPainters(); renderProfile(); renderFilters(); renderFeed(); renderSummary(); renderSourceSummary(); renderDisplayButtons(); }
 
 function renderPainters(){
   const el = $('#paintersList');
@@ -148,7 +148,7 @@ function renderFeed(){
     const p=painterById(item.painterId)||{name:'Unknown'}; const node=tpl.content.cloneNode(true); const card=node.querySelector('.feed-card');
     const thumbWrap=node.querySelector('.thumb-wrap'); const img=node.querySelector('.thumb'); thumbWrap.href=item.url; img.src=item.thumbnail; img.alt=item.title;
     img.onerror=()=>{img.remove();thumbWrap.classList.add('thumb-fallback');};
-    node.querySelector('.source-badge').textContent=(item.source||'LINK').toUpperCase();
+    const sourceBadge=node.querySelector('.source-badge'); sourceBadge.textContent=(item.source||'LINK').toUpperCase(); sourceBadge.dataset.source=(item.source||'Other').toLowerCase();
     const fresh=freshness(item); const freshBadge=node.querySelector('.fresh-badge'); if(fresh){freshBadge.textContent=fresh;freshBadge.classList.remove('hidden');card.classList.add('is-fresh');}
     const painterBtn=node.querySelector('.painter-link'); painterBtn.textContent=p.name; painterBtn.onclick=()=>{state.selectedPainter=item.painterId;renderAll();openProfile();};
     node.querySelector('.date').textContent=relativeDate(item.publishedAt);
@@ -168,6 +168,14 @@ function toggleSave(id){
   localStorage.setItem('dvlPainterSaved',JSON.stringify([...state.saved]));
   renderFeed(); renderSummary(); if(state.selectedPainter) renderProfile();
 }
+function renderSourceSummary(){
+  const el=$('#sourceSummary'); if(!el) return;
+  const counts={}; state.feed.forEach(x=>{const k=x.source||'Other';counts[k]=(counts[k]||0)+1;});
+  const order=['YouTube','ArtStation','Website',...Object.keys(counts).filter(x=>!['YouTube','ArtStation','Website'].includes(x))];
+  el.innerHTML=order.filter(x=>counts[x]).map(x=>`<button data-source-jump="${esc(x)}"><span>${esc(x)}</span><strong>${counts[x]}</strong></button>`).join('');
+  el.querySelectorAll('button').forEach(b=>b.onclick=()=>{state.selectedSource=b.dataset.sourceJump;renderAll();});
+}
+
 function renderSummary(){
   const rows=filteredFeed(); const selected=state.selectedPainter&&painterById(state.selectedPainter);
   $('#summaryTitle').textContent=selected?`${selected.name} 업데이트`:(state.view==='saved'?'저장한 레퍼런스':'오늘의 페인팅 업데이트');

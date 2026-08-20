@@ -209,3 +209,13 @@ h2,h3,p { margin-top:0; }
   .display-btn span { display:none; }
   .profile-drawer { width:100%; }
 }
+
+
+/* V5 — multi-source feed */
+.source-summary { display:flex; flex-wrap:wrap; gap:7px; margin-top:13px; }
+.source-summary button { display:flex; align-items:center; gap:7px; border:1px solid var(--line); background:rgba(0,0,0,.08); color:var(--muted); border-radius:999px; padding:6px 9px; cursor:pointer; font-size:10px; font-weight:800; }
+.source-summary button:hover { color:var(--text); border-color:var(--accent-2); }
+.source-summary strong { color:var(--accent); font-size:11px; }
+.source-badge[data-source="youtube"] { background:rgba(175,20,35,.9); }
+.source-badge[data-source="artstation"] { background:rgba(0,120,190,.92); }
+.source-badge[data-source="website"] { background:rgba(35,45,55,.92); border:1px solid rgba(255,255,255,.18); }
