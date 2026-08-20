@@ -3,110 +3,181 @@
     "id": "juan-sanz",
     "name": "Juan Sanz · Elminiaturista",
     "country": "Spain",
-    "specialties": ["Display", "OSL", "Skin", "NMM"],
+    "specialties": [
+      "Display",
+      "OSL",
+      "Skin",
+      "NMM"
+    ],
     "youtubeChannelId": "",
     "youtube": "",
     "instagram": "https://www.instagram.com/elminiaturista/",
     "patreon": "https://www.patreon.com/elminiaturista",
-    "website": "https://elminiaturista.com/"
+    "website": "https://elminiaturista.com/",
+    "sources": {
+      "websiteRssAuto": true
+    }
   },
   {
     "id": "jose-davinci",
     "name": "Jose Da Vinci",
     "country": "Spain",
-    "specialties": ["Glazing", "Faces", "NMM", "Brushwork"],
+    "specialties": [
+      "Glazing",
+      "Faces",
+      "NMM",
+      "Brushwork"
+    ],
     "youtubeChannelId": "",
     "youtube": "https://www.youtube.com/@JOSEDAVINCI_",
     "instagram": "",
     "patreon": "https://www.patreon.com/josedavinci",
-    "website": ""
+    "website": "",
+    "sources": {}
   },
   {
     "id": "richard-gray",
     "name": "Richard Gray",
     "country": "UK",
-    "specialties": ["Space Marine", "NMM", "Weathering", "Display"],
+    "specialties": [
+      "Space Marine",
+      "NMM",
+      "Weathering",
+      "Display"
+    ],
     "youtubeChannelId": "",
     "youtube": "https://www.youtube.com/@demonrich",
     "instagram": "",
     "patreon": "",
-    "website": "https://richardgraycreations.com/"
+    "website": "https://richardgraycreations.com/",
+    "sources": {}
   },
   {
     "id": "sergio-calvo",
     "name": "Sergio Calvo",
     "country": "Spain",
-    "specialties": ["Display", "Volume", "NMM", "Capibases"],
+    "specialties": [
+      "Display",
+      "Volume",
+      "NMM",
+      "Capibases"
+    ],
     "youtubeChannelId": "UCs8aFalGsl9zNW3CEI5h3sg",
     "youtube": "https://www.youtube.com/@Sergiocalvominiatures",
     "instagram": "https://www.instagram.com/sergiocalvominiatures/",
     "patreon": "https://www.patreon.com/sergiocalvominiatures",
-    "website": "https://sergiocalvominiatures.com/"
+    "website": "https://sergiocalvominiatures.com/",
+    "sources": {
+      "websiteRssAuto": true,
+      "artstation": "https://sergiocalvo.artstation.com/projects"
+    }
   },
   {
     "id": "angel-giraldez",
     "name": "Angel Giraldez",
     "country": "Spain",
-    "specialties": ["Airbrush", "Sci-Fi", "NMM", "Infinity"],
+    "specialties": [
+      "Airbrush",
+      "Sci-Fi",
+      "NMM",
+      "Infinity"
+    ],
     "youtubeChannelId": "UCQVY6ZD9YjxwPzJqJ6DcHgA",
     "youtube": "https://www.youtube.com/@AngelGiraldeZ",
     "instagram": "",
     "patreon": "",
-    "website": ""
+    "website": "https://www.angelgiraldez.com/en/",
+    "sources": {
+      "websiteRssAuto": true
+    }
   },
   {
     "id": "flameon-miniatures",
     "name": "Flameon Miniatures · Maciek",
     "country": "Poland",
-    "specialties": ["Brushwork", "NMM", "Display", "Tutorial"],
+    "specialties": [
+      "Brushwork",
+      "NMM",
+      "Display",
+      "Tutorial"
+    ],
     "youtubeChannelId": "UCL1VaffPr41bkBDnvemAFOw",
     "youtube": "https://www.youtube.com/@FlameonMiniatures",
     "instagram": "",
     "patreon": "https://www.patreon.com/FlameonMiniatures",
-    "website": ""
+    "website": "",
+    "sources": {}
   },
   {
     "id": "craftworld-studio",
     "name": "Craftworld Studio",
     "country": "Serbia",
-    "specialties": ["Underpainting", "NMM", "Atmosphere", "Display"],
+    "specialties": [
+      "Underpainting",
+      "NMM",
+      "Atmosphere",
+      "Display"
+    ],
     "youtubeChannelId": "",
     "youtube": "https://www.youtube.com/@CraftworldStudio",
     "instagram": "https://www.instagram.com/craftworldstudio/",
     "patreon": "",
-    "website": ""
+    "website": "https://craftworldart.wixsite.com/page",
+    "sources": {
+      "websiteRssAuto": true
+    }
   },
   {
     "id": "david-arroba",
     "name": "David Arroba",
     "country": "Spain",
-    "specialties": ["Display", "Color", "Volume", "Tutorial"],
+    "specialties": [
+      "Display",
+      "Color",
+      "Volume",
+      "Tutorial"
+    ],
     "youtubeChannelId": "",
     "youtube": "https://www.youtube.com/@davidarrobaminiatures",
     "instagram": "",
     "patreon": "https://www.patreon.com/cw/DavidArrobaPaintingAcademy/home",
-    "website": ""
+    "website": "",
+    "sources": {}
   },
   {
     "id": "roman-lappat",
     "name": "Roman Lappat",
     "country": "Germany",
-    "specialties": ["Atmosphere", "Diorama", "Storytelling", "Display"],
+    "specialties": [
+      "Atmosphere",
+      "Diorama",
+      "Storytelling",
+      "Display"
+    ],
     "youtubeChannelId": "",
     "youtube": "",
     "instagram": "https://www.instagram.com/romanlappat.miniatureart/",
     "patreon": "",
-    "website": "https://www.romanlappat.com/"
+    "website": "https://www.romanlappat.com/",
+    "sources": {
+      "websiteRssAuto": true
+    }
   },
   {
     "id": "banshee",
     "name": "Alfonso Giraldes · Banshee",
     "country": "Spain",
-    "specialties": ["Color Theory", "Volume", "NMM", "Display"],
+    "specialties": [
+      "Color Theory",
+      "Volume",
+      "NMM",
+      "Display"
+    ],
     "youtubeChannelId": "",
     "youtube": "",
     "instagram": "https://www.instagram.com/alfonso_giraldes_banshee/",
     "patreon": "",
-    "website": "https://www.miniatureartacademy.com/"
+    "website": "https://www.miniatureartacademy.com/",
+    "sources": {}
   }
 ]
