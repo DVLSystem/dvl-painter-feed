@@ -453,7 +453,11 @@ def main():
     painters = json.loads(PAINTERS.read_text(encoding="utf-8"))
     existing = json.loads(FEED.read_text(encoding="utf-8")) if FEED.exists() else []
     generated_prefixes = ("yt:", "web:", "webmap:", "art:")
-    manual = [x for x in existing if not str(x.get("id", "")).startswith(generated_prefixes)]
+    manual = [
+    x for x in existing
+    if not str(x.get("id", "")).startswith(generated_prefixes)
+    and not str(x.get("title", "")).startswith("Demo ·")
+]
     generated = []
     for p in painters:
         ys = youtube_items(p)
