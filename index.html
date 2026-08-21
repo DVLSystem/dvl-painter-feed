@@ -15,6 +15,7 @@
         <h1>DVL PAINTER FEED</h1>
       </div>
       <div class="top-actions">
+        <button id="managePaintersBtn" class="manage-btn" title="페인터 관리">⚙ MANAGE</button>
         <button id="refreshBtn" class="icon-btn" title="새로고침">↻</button>
         <button id="themeBtn" class="icon-btn" title="테마 변경">◐</button>
       </div>
@@ -66,10 +67,10 @@
               <p id="feedStatus" class="muted small"></p>
             </div>
             <div class="feed-controls">
-              <div class="view-tabs" aria-label="피드 종류">
-                <button class="tab active" data-view="latest">LATEST</button>
-                <button class="tab" data-view="saved">SAVED</button>
-                <button class="tab" data-view="images">IMAGE GALLERY</button>
+              <div class="main-view-tabs" aria-label="메인 화면">
+                <button class="main-tab active" data-view="feed">FEED</button>
+                <button class="main-tab" data-view="gallery">GALLERY</button>
+                <button class="main-tab" data-view="saved">SAVED</button>
               </div>
               <div id="displayTabs" class="display-tabs" aria-label="보기 방식">
                 <button class="display-btn active" data-display="list" title="리스트 보기">☰ <span>LIST</span></button>
@@ -97,6 +98,59 @@
     <button id="closeProfileBtn" class="drawer-close" title="닫기">×</button>
     <div id="painterProfile"></div>
   </aside>
+
+  <div id="managerBackdrop" class="manager-backdrop hidden"></div>
+  <section id="managerModal" class="manager-modal" aria-hidden="true">
+    <div class="manager-head">
+      <div><div class="eyebrow">DVL SYSTEM</div><h2>PAINTER MANAGER</h2><p class="muted small">웹에서 페인터를 추가·수정·비활성·삭제하고, 필요하면 GitHub의 painters.json까지 직접 반영합니다.</p></div>
+      <button id="closeManagerBtn" class="drawer-close" title="닫기">×</button>
+    </div>
+    <div class="manager-toolbar">
+      <button id="addPainterBtn" class="primary-btn">＋ ADD PAINTER</button>
+      <button id="exportPaintersBtn" class="secondary-btn">↓ EXPORT JSON</button>
+      <label class="secondary-btn file-btn">↑ IMPORT JSON<input id="importPaintersInput" type="file" accept="application/json,.json" /></label>
+    </div>
+    <div class="manager-layout">
+      <div class="manager-list-wrap">
+        <div id="managerList" class="manager-list"></div>
+      </div>
+      <form id="painterForm" class="painter-form">
+        <input id="formOriginalId" type="hidden" />
+        <div class="form-title-row"><div><span class="drawer-eyebrow">PAINTER DATA</span><h3 id="formTitle">ADD PAINTER</h3></div><label class="active-toggle"><input id="formActive" type="checkbox" checked /><span>ACTIVE</span></label></div>
+        <div class="form-grid">
+          <label><span>Name *</span><input id="formName" required placeholder="예: Richard Gray" /></label>
+          <label><span>ID</span><input id="formId" placeholder="자동 생성 가능" /></label>
+          <label><span>Country</span><input id="formCountry" placeholder="UK" /></label>
+          <label class="wide"><span>Specialties / Tags</span><input id="formSpecialties" placeholder="NMM, Faces, Display" /></label>
+          <label class="wide"><span>YouTube URL</span><input id="formYoutube" type="url" placeholder="https://youtube.com/@..." /></label>
+          <label class="wide"><span>YouTube Channel ID</span><input id="formYoutubeChannelId" placeholder="비워도 핸들 URL로 자동 해석" /></label>
+          <label class="wide"><span>Website</span><input id="formWebsite" type="url" placeholder="https://..." /></label>
+          <label class="wide"><span>Instagram</span><input id="formInstagram" type="url" placeholder="https://instagram.com/..." /></label>
+          <label class="wide"><span>Patreon</span><input id="formPatreon" type="url" placeholder="https://patreon.com/..." /></label>
+        </div>
+        <div class="source-options">
+          <label><input id="formRss" type="checkbox" /> Website RSS 자동 탐색</label>
+          <label><input id="formSitemap" type="checkbox" /> Website Sitemap 자동 탐색</label>
+        </div>
+        <div class="form-actions">
+          <button id="deletePainterBtn" type="button" class="danger-btn hidden">DELETE</button>
+          <span class="spacer"></span>
+          <button id="resetPainterFormBtn" type="button" class="secondary-btn">CLEAR</button>
+          <button type="submit" class="primary-btn">SAVE LOCALLY</button>
+        </div>
+      </form>
+    </div>
+    <div class="github-publish">
+      <div><h3>PUBLISH TO GITHUB</h3><p class="muted small">토큰은 저장하지 않고 이번 브라우저 세션의 요청에만 사용합니다. Fine-grained token에 이 저장소의 <b>Contents: Read and write</b> 권한이 필요합니다.</p></div>
+      <div class="github-grid">
+        <label><span>Owner</span><input id="githubOwner" value="dvlsystem" /></label>
+        <label><span>Repository</span><input id="githubRepo" value="dvl-painter-feed" /></label>
+        <label><span>Branch</span><input id="githubBranch" value="main" /></label>
+        <label class="token-field"><span>GitHub Token</span><input id="githubToken" type="password" autocomplete="off" placeholder="github_pat_..." /></label>
+      </div>
+      <div class="publish-row"><span id="managerStatus" class="muted small">로컬 변경사항 없음</span><button id="publishGithubBtn" class="primary-btn" type="button">PUBLISH painters.json</button></div>
+    </div>
+  </section>
 
   <template id="feedCardTemplate">
     <article class="feed-card">
