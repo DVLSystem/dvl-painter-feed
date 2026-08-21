@@ -23,6 +23,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PAINTERS = ROOT / "data" / "painters.json"
 FEED = ROOT / "data" / "feed.json"
+META = ROOT / "data" / "meta.json"
 MAX_PER_SOURCE = 12
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151 Safari/537.36"
 NS = {
@@ -453,11 +454,7 @@ def main():
     painters = json.loads(PAINTERS.read_text(encoding="utf-8"))
     existing = json.loads(FEED.read_text(encoding="utf-8")) if FEED.exists() else []
     generated_prefixes = ("yt:", "web:", "webmap:", "art:")
-    manual = [
-    x for x in existing
-    if not str(x.get("id", "")).startswith(generated_prefixes)
-    and not str(x.get("title", "")).startswith("Demo ·")
-]
+    manual = [x for x in existing if not str(x.get("id", "")).startswith(generated_prefixes) and not str(x.get("title", "")).startswith("Demo ·")]
     generated = []
     for p in painters:
         ys = youtube_items(p)
@@ -477,7 +474,10 @@ def main():
     FEED.write_text(json.dumps(merged, ensure_ascii=False, indent=2), encoding="utf-8")
     counts = {}
     for x in merged: counts[x.get("source", "Other")] = counts.get(x.get("source", "Other"), 0) + 1
+    checked = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    META.write_text(json.dumps({"lastCheckedAt": checked, "totalItems": len(merged), "counts": counts}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Updated {FEED}: {len(merged)} items {counts}")
+    print(f"Updated {META}: {checked}")
 
 
 if __name__ == "__main__":
