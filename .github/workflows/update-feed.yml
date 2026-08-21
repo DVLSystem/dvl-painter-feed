@@ -11,15 +11,25 @@ permissions:
 jobs:
   update-feed:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Backup last known feed
+        run: cp data/feed.json /tmp/feed-before.json || echo '[]' > /tmp/feed-before.json
+
       - name: Update multi-source feed
         run: python scripts/update_sources.py
+
+      - name: Recover and refresh YouTube feed
+        run: python scripts/update_youtube_rescue.py /tmp/feed-before.json
+
       - name: Commit updated feed
         run: |
           git config user.name "github-actions[bot]"
