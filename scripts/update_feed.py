@@ -43,27 +43,80 @@ def classify(text):
 
 def yt_dlp_items(p):
     url=(p.get("youtubeUrl") or "").strip()
-    if not url: return []
-    # yt-dlp is installed by workflow. This is more resilient than relying only on RSS.
-    cmd=["yt-dlp","--flat-playlist","--playlist-end",str(MAX_PER_SOURCE),"--dump-single-json",
-         "--no-warnings",url.rstrip("/")+"/videos"]
-    proc=subprocess.run(cmd,capture_output=True,text=True,timeout=90)
-    if proc.returncode!=0:
-        raise RuntimeError(proc.stderr.strip()[-500:])
+    if not url:
+        return []
+
+    cmd=[
+        "yt-dlp",
+        "--playlist-end", str(MAX_PER_SOURCE),
+        "--dump-single-json",
+        "--skip-download",
+        "--no-warnings",
+        "--ignore-errors",
+        url.rstrip("/") + "/videos"
+    ]
+    proc=subprocess.run(cmd,capture_output=True,text=True,timeout=180)
+    if proc.returncode!=0 and not proc.stdout.strip():
+        raise RuntimeError(proc.stderr.strip()[-800:])
+
     data=json.loads(proc.stdout)
+    entries=[e for e in (data.get("entries") or []) if e][:MAX_PER_SOURCE]
     out=[]
-    for e in (data.get("entries") or [])[:MAX_PER_SOURCE]:
-        if not e: continue
-        vid=e.get("id"); title=e.get("title") or "YouTube video"
-        if not vid: continue
+
+    def iso_from_entry(e):
         ts=e.get("timestamp") or e.get("release_timestamp")
-        published=datetime.fromtimestamp(ts,tz=timezone.utc).isoformat() if ts else None
+        if ts:
+            return datetime.fromtimestamp(ts,tz=timezone.utc).isoformat()
+
+        for k in ("upload_date","modified_date","release_date"):
+            v=(e.get(k) or "").strip()
+            if re.fullmatch(r"\\d{8}", v):
+                try:
+                    return datetime.strptime(v,"%Y%m%d").replace(tzinfo=timezone.utc).isoformat()
+                except Exception:
+                    pass
+        return None
+
+    for e in entries:
+        vid=e.get("id")
+        if not vid:
+            continue
+
+        title=e.get("title") or "YouTube video"
+        published=iso_from_entry(e)
+
+        if not published:
+            watch_url="https://www.youtube.com/watch?v="+vid
+            detail_cmd=[
+                "yt-dlp",
+                "--dump-single-json",
+                "--skip-download",
+                "--no-warnings",
+                "--ignore-errors",
+                watch_url
+            ]
+            try:
+                dp=subprocess.run(detail_cmd,capture_output=True,text=True,timeout=60)
+                if dp.stdout.strip():
+                    de=json.loads(dp.stdout)
+                    title=de.get("title") or title
+                    published=iso_from_entry(de)
+            except Exception:
+                pass
+
         out.append({
-          "id":"yt-"+vid, "painterId":p["id"],"painterName":p["name"],"source":"YouTube",
-          "title":title,"url":"https://www.youtube.com/watch?v="+vid,
-          "thumbnail":f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg","publishedAt":published,
+          "id":"yt-"+vid,
+          "painterId":p["id"],
+          "painterName":p["name"],
+          "source":"YouTube",
+          "title":title,
+          "url":"https://www.youtube.com/watch?v="+vid,
+          "thumbnail":f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg",
+          "publishedAt":published,
           "tags":classify(title)
         })
+
+    out.sort(key=lambda x: x.get("publishedAt") or "", reverse=True)
     return out
 
 def rss_items(p, feed_url):
@@ -156,7 +209,13 @@ def main():
         if x.get("painterId") in active_ids or x.get("source")=="Reference":
             ded[x.get("id") or safe_id((x.get("url") or "")+(x.get("title") or ""))]=x
     out=list(ded.values())
-    out.sort(key=lambda x: x.get("publishedAt") or "", reverse=True)
+    out.sort(
+        key=lambda x: (
+            1 if x.get("publishedAt") else 0,
+            x.get("publishedAt") or ""
+        ),
+        reverse=True
+    )
     FFILE.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     counts={}
     for x in out: counts[x.get("source","Reference")]=counts.get(x.get("source","Reference"),0)+1

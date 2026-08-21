@@ -1,4 +1,4 @@
-# DVL Painter Feed — Clean v1.1 Top 5
+# DVL Painter Feed — Clean v1.2 Chronological
 
 A clean rebuild intended to replace the mixed V3–V8 files.
 
@@ -47,3 +47,13 @@ This build keeps:
 5. Flameon Miniatures
 
 `MAX_PER_SOURCE = 30`, so each painter can contribute up to 30 items per enabled source.
+
+
+## v1.2 chronological feed
+- Same simple FEED / SAVED UI.
+- Keeps the Top 5 painter set.
+- Keeps 30 feed items per painter/source.
+- YouTube upload/release dates are collected for chronological sorting.
+- If a playlist entry lacks a date, the updater fetches that video's metadata individually.
+- The final merged feed is globally sorted newest-first across all painters.
+- Undated items are placed after dated items.
