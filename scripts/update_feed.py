@@ -46,63 +46,65 @@ def yt_dlp_items(p):
     if not url:
         return []
 
+    # 1) Always get the channel list in flat mode first.
+    # This was the reliable mode in Clean v1 / v1.1 and prevents a metadata
+    # lookup failure from turning a healthy channel into 0 feed items.
     cmd=[
         "yt-dlp",
+        "--flat-playlist",
         "--playlist-end", str(MAX_PER_SOURCE),
         "--dump-single-json",
-        "--skip-download",
         "--no-warnings",
-        "--ignore-errors",
         url.rstrip("/") + "/videos"
     ]
-    proc=subprocess.run(cmd,capture_output=True,text=True,timeout=180)
-    if proc.returncode!=0 and not proc.stdout.strip():
-        raise RuntimeError(proc.stderr.strip()[-800:])
+    proc=subprocess.run(cmd,capture_output=True,text=True,timeout=120)
+    if proc.returncode!=0 or not proc.stdout.strip():
+        raise RuntimeError(proc.stderr.strip()[-800:] or "empty yt-dlp response")
 
     data=json.loads(proc.stdout)
     entries=[e for e in (data.get("entries") or []) if e][:MAX_PER_SOURCE]
+
+    # 2) Build a date map from YouTube RSS using the channel_id that yt-dlp
+    # itself resolved. RSS normally contains the newest ~15 uploads and gives
+    # exact published timestamps, which is enough to interleave recent posts
+    # from different painters accurately.
+    rss_dates={}
+    channel_id=(data.get("channel_id") or data.get("uploader_id") or "").strip()
+    if channel_id.startswith("UC"):
+        try:
+            raw,_=fetch("https://www.youtube.com/feeds/videos.xml?channel_id="+channel_id, timeout=20)
+            rr=ET.fromstring(raw)
+            ns={
+              "atom":"http://www.w3.org/2005/Atom",
+              "yt":"http://www.youtube.com/xml/schemas/2015"
+            }
+            for en in rr.findall("atom:entry",ns):
+                vid=(en.findtext("yt:videoId",default="",namespaces=ns) or "").strip()
+                pub=(en.findtext("atom:published",default="",namespaces=ns) or "").strip()
+                if vid and pub:
+                    rss_dates[vid]=pub
+        except Exception as e:
+            print("  YouTube RSS date supplement failed:", e)
+
     out=[]
-
-    def iso_from_entry(e):
-        ts=e.get("timestamp") or e.get("release_timestamp")
-        if ts:
-            return datetime.fromtimestamp(ts,tz=timezone.utc).isoformat()
-
-        for k in ("upload_date","modified_date","release_date"):
-            v=(e.get(k) or "").strip()
-            if re.fullmatch(r"\\d{8}", v):
-                try:
-                    return datetime.strptime(v,"%Y%m%d").replace(tzinfo=timezone.utc).isoformat()
-                except Exception:
-                    pass
-        return None
-
-    for e in entries:
+    for index,e in enumerate(entries):
         vid=e.get("id")
         if not vid:
             continue
-
         title=e.get("title") or "YouTube video"
-        published=iso_from_entry(e)
 
+        published=rss_dates.get(vid)
         if not published:
-            watch_url="https://www.youtube.com/watch?v="+vid
-            detail_cmd=[
-                "yt-dlp",
-                "--dump-single-json",
-                "--skip-download",
-                "--no-warnings",
-                "--ignore-errors",
-                watch_url
-            ]
-            try:
-                dp=subprocess.run(detail_cmd,capture_output=True,text=True,timeout=60)
-                if dp.stdout.strip():
-                    de=json.loads(dp.stdout)
-                    title=de.get("title") or title
-                    published=iso_from_entry(de)
-            except Exception:
-                pass
+            ts=e.get("timestamp") or e.get("release_timestamp")
+            if ts:
+                published=datetime.fromtimestamp(ts,tz=timezone.utc).isoformat()
+            else:
+                ud=(e.get("upload_date") or e.get("release_date") or "").strip()
+                if re.fullmatch(r"\d{8}", ud):
+                    try:
+                        published=datetime.strptime(ud,"%Y%m%d").replace(tzinfo=timezone.utc).isoformat()
+                    except Exception:
+                        published=None
 
         out.append({
           "id":"yt-"+vid,
@@ -113,10 +115,10 @@ def yt_dlp_items(p):
           "url":"https://www.youtube.com/watch?v="+vid,
           "thumbnail":f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg",
           "publishedAt":published,
+          "_channelOrder": index,
           "tags":classify(title)
         })
 
-    out.sort(key=lambda x: x.get("publishedAt") or "", reverse=True)
     return out
 
 def rss_items(p, feed_url):
@@ -176,9 +178,18 @@ def website_items(p):
     return sitemap_items(p)
 
 def merge_source(old, fresh, painter_id, source):
-    # Critical invariant: a transient fetch failure must never erase the last good cache.
     prior=[x for x in old if x.get("painterId")==painter_id and x.get("source")==source]
-    return fresh if fresh else prior
+    if not fresh:
+        return prior
+
+    prior_by_id={x.get("id"):x for x in prior if x.get("id")}
+    merged=[]
+    for x in fresh:
+        prev=prior_by_id.get(x.get("id"))
+        if not x.get("publishedAt") and prev and prev.get("publishedAt"):
+            x["publishedAt"]=prev.get("publishedAt")
+        merged.append(x)
+    return merged
 
 def main():
     painters=read_json(PFILE,[])
@@ -203,19 +214,26 @@ def main():
             print("  Website failed:",e); w=[]
         result.extend(merge_source(old,w,p["id"],"Website"))
 
-    # dedupe and stable sort
+    # dedupe and global chronological sort
     ded={}
+    seq=0
     for x in result:
         if x.get("painterId") in active_ids or x.get("source")=="Reference":
+            x["_seq"]=seq
+            seq+=1
             ded[x.get("id") or safe_id((x.get("url") or "")+(x.get("title") or ""))]=x
     out=list(ded.values())
     out.sort(
         key=lambda x: (
             1 if x.get("publishedAt") else 0,
-            x.get("publishedAt") or ""
+            x.get("publishedAt") or "",
+            -x.get("_seq",0)
         ),
         reverse=True
     )
+    for x in out:
+        x.pop("_seq",None)
+        x.pop("_channelOrder",None)
     FFILE.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     counts={}
     for x in out: counts[x.get("source","Reference")]=counts.get(x.get("source","Reference"),0)+1
