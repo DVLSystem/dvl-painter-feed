@@ -1,1 +1,1088 @@
-[]
+[
+  {
+    "id": "web-https-elminiaturista-com-2017-04-05-hello-world-2",
+    "painterId": "juan-sanz",
+    "painterName": "Juan Sanz",
+    "source": "Website",
+    "title": "Hello world!",
+    "url": "https://elminiaturista.com/2017/04/05/hello-world-2/",
+    "thumbnail": "",
+    "publishedAt": "Wed, 05 Apr 2017 10:59:26 +0000",
+    "tags": []
+  },
+  {
+    "id": "web-https-elminiaturista-com-2017-07-25-the-camden-cycling-watch",
+    "painterId": "juan-sanz",
+    "painterName": "Juan Sanz",
+    "source": "Website",
+    "title": "The Camden cycling watch",
+    "url": "https://elminiaturista.com/2017/07/25/the-camden-cycling-watch/",
+    "thumbnail": "",
+    "publishedAt": "Tue, 25 Jul 2017 12:46:22 +0000",
+    "tags": []
+  },
+  {
+    "id": "web-https-elminiaturista-com-2017-07-25-5-ways-to-be-a-real-cyclist-plus-5-more",
+    "painterId": "juan-sanz",
+    "painterName": "Juan Sanz",
+    "source": "Website",
+    "title": "5 ways to be a real cyclist plus 5 more",
+    "url": "https://elminiaturista.com/2017/07/25/5-ways-to-be-a-real-cyclist-plus-5-more/",
+    "thumbnail": "",
+    "publishedAt": "Tue, 25 Jul 2017 12:45:46 +0000",
+    "tags": [
+      "Ork"
+    ]
+  },
+  {
+    "id": "web-https-elminiaturista-com-2017-07-25-how-to-cycle-in-a-group",
+    "painterId": "juan-sanz",
+    "painterName": "Juan Sanz",
+    "source": "Website",
+    "title": "How to Cycle in a Group",
+    "url": "https://elminiaturista.com/2017/07/25/how-to-cycle-in-a-group/",
+    "thumbnail": "",
+    "publishedAt": "Tue, 25 Jul 2017 12:45:16 +0000",
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "web-https-elminiaturista-com-2023-09-07-hello-world",
+    "painterId": "juan-sanz",
+    "painterName": "Juan Sanz",
+    "source": "Website",
+    "title": "Hello world!",
+    "url": "https://elminiaturista.com/2023/09/07/hello-world/",
+    "thumbnail": "",
+    "publishedAt": "Thu, 07 Sep 2023 16:43:25 +0000",
+    "tags": []
+  },
+  {
+    "id": "web-https-elminiaturista-com-2017-07-06-10-tips-to-help-you-race",
+    "painterId": "juan-sanz",
+    "painterName": "Juan Sanz",
+    "source": "Website",
+    "title": "10 Tips to help you race",
+    "url": "https://elminiaturista.com/2017/07/06/10-tips-to-help-you-race/",
+    "thumbnail": "",
+    "publishedAt": "Thu, 06 Jul 2017 14:59:00 +0000",
+    "tags": []
+  },
+  {
+    "id": "web-https-www-romanlappat-com",
+    "painterId": "roman-lappat",
+    "painterName": "Roman Lappat",
+    "source": "Website",
+    "title": "Www.Romanlappat.Com",
+    "url": "https://www.romanlappat.com",
+    "thumbnail": "",
+    "publishedAt": "2026-06-30T19:53:01+02:00",
+    "tags": []
+  },
+  {
+    "id": "web-https-www-romanlappat-com-challenges-astronaut-challenge-2025",
+    "painterId": "roman-lappat",
+    "painterName": "Roman Lappat",
+    "source": "Website",
+    "title": "Astronaut Challenge 2025",
+    "url": "https://www.romanlappat.com/challenges/astronaut-challenge-2025",
+    "thumbnail": "",
+    "publishedAt": "2026-05-13T15:12:47+02:00",
+    "tags": []
+  },
+  {
+    "id": "web-https-www-romanlappat-com-teaching-workshops",
+    "painterId": "roman-lappat",
+    "painterName": "Roman Lappat",
+    "source": "Website",
+    "title": "Workshops",
+    "url": "https://www.romanlappat.com/teaching/workshops",
+    "thumbnail": "",
+    "publishedAt": "2026-01-22T10:06:06+01:00",
+    "tags": [
+      "Ork"
+    ]
+  },
+  {
+    "id": "web-https-www-romanlappat-com-impressum",
+    "painterId": "roman-lappat",
+    "painterName": "Roman Lappat",
+    "source": "Website",
+    "title": "Impressum",
+    "url": "https://www.romanlappat.com/impressum",
+    "thumbnail": "",
+    "publishedAt": "2025-01-20T12:19:39+01:00",
+    "tags": []
+  },
+  {
+    "id": "web-https-www-romanlappat-com-teaching-group-masterclass",
+    "painterId": "roman-lappat",
+    "painterName": "Roman Lappat",
+    "source": "Website",
+    "title": "Group Masterclass",
+    "url": "https://www.romanlappat.com/teaching/group-masterclass",
+    "thumbnail": "",
+    "publishedAt": "2024-09-04T23:59:31+02:00",
+    "tags": []
+  },
+  {
+    "id": "web-https-www-romanlappat-com-teaching",
+    "painterId": "roman-lappat",
+    "painterName": "Roman Lappat",
+    "source": "Website",
+    "title": "Teaching",
+    "url": "https://www.romanlappat.com/teaching",
+    "thumbnail": "",
+    "publishedAt": "2024-09-04T23:59:09+02:00",
+    "tags": []
+  },
+  {
+    "id": "web-https-www-romanlappat-com-miniatures",
+    "painterId": "roman-lappat",
+    "painterName": "Roman Lappat",
+    "source": "Website",
+    "title": "Miniatures",
+    "url": "https://www.romanlappat.com/miniatures",
+    "thumbnail": "",
+    "publishedAt": "2024-08-29T06:33:44+02:00",
+    "tags": []
+  },
+  {
+    "id": "web-https-www-romanlappat-com-disclaimer",
+    "painterId": "roman-lappat",
+    "painterName": "Roman Lappat",
+    "source": "Website",
+    "title": "Disclaimer",
+    "url": "https://www.romanlappat.com/disclaimer",
+    "thumbnail": "",
+    "publishedAt": "2024-08-21T15:39:29+02:00",
+    "tags": []
+  },
+  {
+    "id": "web-https-www-romanlappat-com-workshops-reviews-beginner-workshop-2024-augsburg-germany",
+    "painterId": "roman-lappat",
+    "painterName": "Roman Lappat",
+    "source": "Website",
+    "title": "Beginner Workshop 2024 Augsburg Germany",
+    "url": "https://www.romanlappat.com/workshops/reviews/beginner-workshop-2024-augsburg-germany",
+    "thumbnail": "",
+    "publishedAt": "2024-05-11T11:50:11+02:00",
+    "tags": [
+      "Ork"
+    ]
+  },
+  {
+    "id": "web-https-www-romanlappat-com-workshops-reviews-osl-workshop-2024-augsburg-germany",
+    "painterId": "roman-lappat",
+    "painterName": "Roman Lappat",
+    "source": "Website",
+    "title": "Osl Workshop 2024 Augsburg Germany",
+    "url": "https://www.romanlappat.com/workshops/reviews/osl-workshop-2024-augsburg-germany",
+    "thumbnail": "",
+    "publishedAt": "2024-04-29T15:58:06+02:00",
+    "tags": [
+      "OSL",
+      "Ork"
+    ]
+  },
+  {
+    "id": "web-https-www-romanlappat-com-workshops-reviews-speedpainting-masterclass-2024-augsburg-germany",
+    "painterId": "roman-lappat",
+    "painterName": "Roman Lappat",
+    "source": "Website",
+    "title": "Speedpainting Masterclass 2024 Augsburg Germany",
+    "url": "https://www.romanlappat.com/workshops/reviews/speedpainting-masterclass-2024-augsburg-germany",
+    "thumbnail": "",
+    "publishedAt": "2024-04-20T18:43:18+02:00",
+    "tags": []
+  },
+  {
+    "id": "web-https-www-romanlappat-com-thanks",
+    "painterId": "roman-lappat",
+    "painterName": "Roman Lappat",
+    "source": "Website",
+    "title": "Thanks",
+    "url": "https://www.romanlappat.com/thanks",
+    "thumbnail": "",
+    "publishedAt": "2024-03-02T17:38:09+01:00",
+    "tags": []
+  },
+  {
+    "id": "yt-HmsDcZpHY4U",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "Miniature painting: The REAL Reason Your NMM Gold Doesn’t Work",
+    "url": "https://www.youtube.com/watch?v=HmsDcZpHY4U",
+    "thumbnail": "https://i.ytimg.com/vi/HmsDcZpHY4U/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "NMM",
+      "Ork",
+      "Gold"
+    ]
+  },
+  {
+    "id": "yt-xFffJIhLgZg",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "Easy Way to Paint NEW Custodes in GRIMDARK Style | Brush Only",
+    "url": "https://www.youtube.com/watch?v=xFffJIhLgZg",
+    "thumbnail": "https://i.ytimg.com/vi/xFffJIhLgZg/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-MH2NIa_3iyo",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "How to Paint BLACK Armor Without It Looking Grey | Raynor StarCraft",
+    "url": "https://www.youtube.com/watch?v=MH2NIa_3iyo",
+    "thumbnail": "https://i.ytimg.com/vi/MH2NIa_3iyo/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-cwsrsDgkH0E",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "I 3D Scanned an Old Hulk and Turned It into a Professional Miniature (Revopoint MINI 2)",
+    "url": "https://www.youtube.com/watch?v=cwsrsDgkH0E",
+    "thumbnail": "https://i.ytimg.com/vi/cwsrsDgkH0E/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-uvrfA1q3Pxs",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "Why Your Miniatures Lose Contrast | Full Painting Guide (Red, White, Black + OSL)",
+    "url": "https://www.youtube.com/watch?v=uvrfA1q3Pxs",
+    "thumbnail": "https://i.ytimg.com/vi/uvrfA1q3Pxs/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "OSL",
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-yrjtjuXFg2w",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "How to Paint SMOOTH Skin on Miniatures (Highlights, Shadows & Glazes) | Step by Step",
+    "url": "https://www.youtube.com/watch?v=yrjtjuXFg2w",
+    "thumbnail": "https://i.ytimg.com/vi/yrjtjuXFg2w/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Skin",
+      "Glazing",
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-qUdTolCB-rM",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "How to Paint Space Marines – Eavy Metal Style | Titus | Warhammer 40K",
+    "url": "https://www.youtube.com/watch?v=qUdTolCB-rM",
+    "thumbnail": "https://i.ytimg.com/vi/qUdTolCB-rM/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Space Marine",
+      "Steel",
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-92YtIbpG6EE",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "Slapchop Isn’t Enough | Make Contrast Paints Look PRO",
+    "url": "https://www.youtube.com/watch?v=92YtIbpG6EE",
+    "thumbnail": "https://i.ytimg.com/vi/92YtIbpG6EE/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-cM25-3eVg6E",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "Why Your Slapchop Looks DIRTY | 5 Mistakes with Contrast & Quick Gen",
+    "url": "https://www.youtube.com/watch?v=cM25-3eVg6E",
+    "thumbnail": "https://i.ytimg.com/vi/cM25-3eVg6E/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-vtA-47ZwfxE",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "Stop Using Only Drybrush (Slapchop) on Your Minis | Best Grisaille Base for Contrast & Quick Gen",
+    "url": "https://www.youtube.com/watch?v=vtA-47ZwfxE",
+    "thumbnail": "https://i.ytimg.com/vi/vtA-47ZwfxE/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-mj9kGMG5vBs",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "The Secret to Painting Miniatures Like a Pro: 15 Hours in 25 Mins",
+    "url": "https://www.youtube.com/watch?v=mj9kGMG5vBs",
+    "thumbnail": "https://i.ytimg.com/vi/mj9kGMG5vBs/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-m1BdgHG-944",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "How to Paint a Stormcast —  Brush Only",
+    "url": "https://www.youtube.com/watch?v=m1BdgHG-944",
+    "thumbnail": "https://i.ytimg.com/vi/m1BdgHG-944/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-lNpSJS7HUOI",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Rotspot 2026 Painting Competition Results!",
+    "url": "https://www.youtube.com/watch?v=lNpSJS7HUOI",
+    "thumbnail": "https://i.ytimg.com/vi/lNpSJS7HUOI/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-9E8TStNnSmk",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Golden Demon Adepticon 2026 - All (most?) of the Entries!",
+    "url": "https://www.youtube.com/watch?v=9E8TStNnSmk",
+    "thumbnail": "https://i.ytimg.com/vi/9E8TStNnSmk/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Gold"
+    ]
+  },
+  {
+    "id": "yt-QCI_FcryntI",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Squigmas Painting Competition Results!",
+    "url": "https://www.youtube.com/watch?v=QCI_FcryntI",
+    "thumbnail": "https://i.ytimg.com/vi/QCI_FcryntI/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-BWrroNGKhJU",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Bonezone 2025 Painting Competition Results!",
+    "url": "https://www.youtube.com/watch?v=BWrroNGKhJU",
+    "thumbnail": "https://i.ytimg.com/vi/BWrroNGKhJU/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-18sNVE8Wolo",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Orange Blood Angel with a Mustache!",
+    "url": "https://www.youtube.com/watch?v=18sNVE8Wolo",
+    "thumbnail": "https://i.ytimg.com/vi/18sNVE8Wolo/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-gpNn1zhEgpQ",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Golden Demon Essen 2025 - My Thoughts and the Cabinets",
+    "url": "https://www.youtube.com/watch?v=gpNn1zhEgpQ",
+    "thumbnail": "https://i.ytimg.com/vi/gpNn1zhEgpQ/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Gold"
+    ]
+  },
+  {
+    "id": "yt-469Cu-sLrBI",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Imperial Fists Saturnine Terminators - Horus Heresy",
+    "url": "https://www.youtube.com/watch?v=469Cu-sLrBI",
+    "thumbnail": "https://i.ytimg.com/vi/469Cu-sLrBI/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-ObHCK-9eHSU",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Rotspot Painting Competition Results 2025!",
+    "url": "https://www.youtube.com/watch?v=ObHCK-9eHSU",
+    "thumbnail": "https://i.ytimg.com/vi/ObHCK-9eHSU/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-f88RBm1_ic8",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Golden Demon Adepticon 2025 Cabinets!",
+    "url": "https://www.youtube.com/watch?v=f88RBm1_ic8",
+    "thumbnail": "https://i.ytimg.com/vi/f88RBm1_ic8/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Gold"
+    ]
+  },
+  {
+    "id": "yt-vUv9KNYFl8w",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Death Korps of Krieg Commisar",
+    "url": "https://www.youtube.com/watch?v=vUv9KNYFl8w",
+    "thumbnail": "https://i.ytimg.com/vi/vUv9KNYFl8w/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-vy1wCogx2Gw",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Legends of Paint: A Taste of Golden Demon",
+    "url": "https://www.youtube.com/watch?v=vy1wCogx2Gw",
+    "thumbnail": "https://i.ytimg.com/vi/vy1wCogx2Gw/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Gold"
+    ]
+  },
+  {
+    "id": "yt-wbo3QRxoAro",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "The Bone Zone 2024 Results!",
+    "url": "https://www.youtube.com/watch?v=wbo3QRxoAro",
+    "thumbnail": "https://i.ytimg.com/vi/wbo3QRxoAro/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-cp8vmdqOOQk",
+    "painterId": "sergio-calvo",
+    "painterName": "Sergio Calvo",
+    "source": "YouTube",
+    "title": "I Painted This for 120 HOURS — This Is the Result | Relaxing Art",
+    "url": "https://www.youtube.com/watch?v=cp8vmdqOOQk",
+    "thumbnail": "https://i.ytimg.com/vi/cp8vmdqOOQk/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-mnd0NDsLVC8",
+    "painterId": "sergio-calvo",
+    "painterName": "Sergio Calvo",
+    "source": "YouTube",
+    "title": "This Miniature Deserves a Place in the DISPLAY CASE 🏆 ASMR Painting & Relaxing Music",
+    "url": "https://www.youtube.com/watch?v=mnd0NDsLVC8",
+    "thumbnail": "https://i.ytimg.com/vi/mnd0NDsLVC8/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-qDY0jvC8iLQ",
+    "painterId": "sergio-calvo",
+    "painterName": "Sergio Calvo",
+    "source": "YouTube",
+    "title": "I Didn't Expect This at AdeptiCon 2026",
+    "url": "https://www.youtube.com/watch?v=qDY0jvC8iLQ",
+    "thumbnail": "https://i.ytimg.com/vi/qDY0jvC8iLQ/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt--cE4lSskR4g",
+    "painterId": "sergio-calvo",
+    "painterName": "Sergio Calvo",
+    "source": "YouTube",
+    "title": "What was supposed to be something simple ended like this… | Full relaxing painting",
+    "url": "https://www.youtube.com/watch?v=-cE4lSskR4g",
+    "thumbnail": "https://i.ytimg.com/vi/-cE4lSskR4g/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-ftM9GLJgY8s",
+    "painterId": "sergio-calvo",
+    "painterName": "Sergio Calvo",
+    "source": "YouTube",
+    "title": "40 Hours Later... This Crocodile Came to Life",
+    "url": "https://www.youtube.com/watch?v=ftM9GLJgY8s",
+    "thumbnail": "https://i.ytimg.com/vi/ftM9GLJgY8s/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-eZrKab5Cx-Q",
+    "painterId": "sergio-calvo",
+    "painterName": "Sergio Calvo",
+    "source": "YouTube",
+    "title": "I Just Won at the GOLDEN DEMON… Full Painting Process in One Video | Dark Angels",
+    "url": "https://www.youtube.com/watch?v=eZrKab5Cx-Q",
+    "thumbnail": "https://i.ytimg.com/vi/eZrKab5Cx-Q/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Gold",
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-c0nVC9ZegSQ",
+    "painterId": "sergio-calvo",
+    "painterName": "Sergio Calvo",
+    "source": "YouTube",
+    "title": "I'm Going to Spend 400 HOURS on This Miniature",
+    "url": "https://www.youtube.com/watch?v=c0nVC9ZegSQ",
+    "thumbnail": "https://i.ytimg.com/vi/c0nVC9ZegSQ/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-SWA3dasRP8s",
+    "painterId": "sergio-calvo",
+    "painterName": "Sergio Calvo",
+    "source": "YouTube",
+    "title": "A New Legend Rises… ASURA | SAVAGE RITUALS",
+    "url": "https://www.youtube.com/watch?v=SWA3dasRP8s",
+    "thumbnail": "https://i.ytimg.com/vi/SWA3dasRP8s/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-qvsPyxI6Ms8",
+    "painterId": "sergio-calvo",
+    "painterName": "Sergio Calvo",
+    "source": "YouTube",
+    "title": "I’m Back… and This is EPIC! | ASURA - SAVAGE RITUALS",
+    "url": "https://www.youtube.com/watch?v=qvsPyxI6Ms8",
+    "thumbnail": "https://i.ytimg.com/vi/qvsPyxI6Ms8/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-qdZkxW-ySZs",
+    "painterId": "sergio-calvo",
+    "painterName": "Sergio Calvo",
+    "source": "YouTube",
+    "title": "The Art of Painting a Fairy Miniature | My Step-by-Step Process",
+    "url": "https://www.youtube.com/watch?v=qdZkxW-ySZs",
+    "thumbnail": "https://i.ytimg.com/vi/qdZkxW-ySZs/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-Py9dhzOXNi0",
+    "painterId": "sergio-calvo",
+    "painterName": "Sergio Calvo",
+    "source": "YouTube",
+    "title": "I Painted This Necron After 5 YEARS… And a Collector Snapped It Up!",
+    "url": "https://www.youtube.com/watch?v=Py9dhzOXNi0",
+    "thumbnail": "https://i.ytimg.com/vi/Py9dhzOXNi0/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-XYauxyouTJE",
+    "painterId": "sergio-calvo",
+    "painterName": "Sergio Calvo",
+    "source": "YouTube",
+    "title": "Is It Worth Painting ONE Miniature for 40 Hours? | THE POLICE OF THE FUTURE",
+    "url": "https://www.youtube.com/watch?v=XYauxyouTJE",
+    "thumbnail": "https://i.ytimg.com/vi/XYauxyouTJE/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-Q0XEVdQOP2k",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Paint BLACK TEMPLAR | Complete Painting Guide",
+    "url": "https://www.youtube.com/watch?v=Q0XEVdQOP2k",
+    "thumbnail": "https://i.ytimg.com/vi/Q0XEVdQOP2k/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-ZoBUxV-dQro",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Paint Gold & Black NMM with the BSL System",
+    "url": "https://www.youtube.com/watch?v=ZoBUxV-dQro",
+    "thumbnail": "https://i.ytimg.com/vi/ZoBUxV-dQro/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "NMM",
+      "Gold",
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-uLbrabJtbbo",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Clean an Airbrush – The Easy Way",
+    "url": "https://www.youtube.com/watch?v=uLbrabJtbbo",
+    "thumbnail": "https://i.ytimg.com/vi/uLbrabJtbbo/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Airbrush",
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-Ea0nv3MYiFc",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to paint TURQUOISE using BSL SYSTEM",
+    "url": "https://www.youtube.com/watch?v=Ea0nv3MYiFc",
+    "thumbnail": "https://i.ytimg.com/vi/Ea0nv3MYiFc/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-ULrB3Upe1EY",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to make JUNGLE BASES 🌱",
+    "url": "https://www.youtube.com/watch?v=ULrB3Upe1EY",
+    "thumbnail": "https://i.ytimg.com/vi/ULrB3Upe1EY/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt--EB026PNMKY",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Paint Blood Angels",
+    "url": "https://www.youtube.com/watch?v=-EB026PNMKY",
+    "thumbnail": "https://i.ytimg.com/vi/-EB026PNMKY/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-z-epkyoJYLw",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Use Fluorescent Paints: Tips for Better Results",
+    "url": "https://www.youtube.com/watch?v=z-epkyoJYLw",
+    "thumbnail": "https://i.ytimg.com/vi/z-epkyoJYLw/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-gJ7w5SZlncY",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "Painting a Goblin Tank Like a Pro",
+    "url": "https://www.youtube.com/watch?v=gJ7w5SZlncY",
+    "thumbnail": "https://i.ytimg.com/vi/gJ7w5SZlncY/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-EMfobYu8Z0w",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Paint a Warm Color Scheme (Seraphon)",
+    "url": "https://www.youtube.com/watch?v=EMfobYu8Z0w",
+    "thumbnail": "https://i.ytimg.com/vi/EMfobYu8Z0w/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-JgiUcTE82Lw",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Paint Bases for StarCraft Miniatures.",
+    "url": "https://www.youtube.com/watch?v=JgiUcTE82Lw",
+    "thumbnail": "https://i.ytimg.com/vi/JgiUcTE82Lw/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-rpJP3pk1wHM",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Paint Skaven for Warhammer 🐀",
+    "url": "https://www.youtube.com/watch?v=rpJP3pk1wHM",
+    "thumbnail": "https://i.ytimg.com/vi/rpJP3pk1wHM/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-_VLlmvKmOEA",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to paint Joan of Arc ( Limited Edition)",
+    "url": "https://www.youtube.com/watch?v=_VLlmvKmOEA",
+    "thumbnail": "https://i.ytimg.com/vi/_VLlmvKmOEA/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-43ozZjdvx5g",
+    "painterId": "flameon-miniatures",
+    "painterName": "Flameon Miniatures",
+    "source": "YouTube",
+    "title": "Paint drying on a plasma coil",
+    "url": "https://www.youtube.com/watch?v=43ozZjdvx5g",
+    "thumbnail": "https://i.ytimg.com/vi/43ozZjdvx5g/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-LZ9TWjtHhiQ",
+    "painterId": "flameon-miniatures",
+    "painterName": "Flameon Miniatures",
+    "source": "YouTube",
+    "title": "Converting a goblin hidden inside of the santa's sack Da Red Gobbo's Tinboy",
+    "url": "https://www.youtube.com/watch?v=LZ9TWjtHhiQ",
+    "thumbnail": "https://i.ytimg.com/vi/LZ9TWjtHhiQ/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-yWgXs1BZ4LM",
+    "painterId": "flameon-miniatures",
+    "painterName": "Flameon Miniatures",
+    "source": "YouTube",
+    "title": "Painting words on tiny scrolls warhammer 40000",
+    "url": "https://www.youtube.com/watch?v=yWgXs1BZ4LM",
+    "thumbnail": "https://i.ytimg.com/vi/yWgXs1BZ4LM/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Space Marine"
+    ]
+  },
+  {
+    "id": "yt-ll6mzDlzJLc",
+    "painterId": "flameon-miniatures",
+    "painterName": "Flameon Miniatures",
+    "source": "YouTube",
+    "title": "Making saliva strings effect on a Death Guard Nurgle mouth armor #warhammer40k",
+    "url": "https://www.youtube.com/watch?v=ll6mzDlzJLc",
+    "thumbnail": "https://i.ytimg.com/vi/ll6mzDlzJLc/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-1aA42SIQfPA",
+    "painterId": "flameon-miniatures",
+    "painterName": "Flameon Miniatures",
+    "source": "YouTube",
+    "title": "Asmodai Master of Repentance presentation",
+    "url": "https://www.youtube.com/watch?v=1aA42SIQfPA",
+    "thumbnail": "https://i.ytimg.com/vi/1aA42SIQfPA/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-zMDfVWeF59Q",
+    "painterId": "flameon-miniatures",
+    "painterName": "Flameon Miniatures",
+    "source": "YouTube",
+    "title": "Steel Rook of Cities of Sigmar painted: Video presentation",
+    "url": "https://www.youtube.com/watch?v=zMDfVWeF59Q",
+    "thumbnail": "https://i.ytimg.com/vi/zMDfVWeF59Q/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Steel"
+    ]
+  },
+  {
+    "id": "yt-c4d6kgr1O0k",
+    "painterId": "flameon-miniatures",
+    "painterName": "Flameon Miniatures",
+    "source": "YouTube",
+    "title": "Thousand Sons Aspiring Sorcerer presentation",
+    "url": "https://www.youtube.com/watch?v=c4d6kgr1O0k",
+    "thumbnail": "https://i.ytimg.com/vi/c4d6kgr1O0k/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Ork"
+    ]
+  },
+  {
+    "id": "yt-Dzi4S3gVDv0",
+    "painterId": "flameon-miniatures",
+    "painterName": "Flameon Miniatures",
+    "source": "YouTube",
+    "title": "Commander Dante of Blood Angels presentation",
+    "url": "https://www.youtube.com/watch?v=Dzi4S3gVDv0",
+    "thumbnail": "https://i.ytimg.com/vi/Dzi4S3gVDv0/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-q4mplHpUyMQ",
+    "painterId": "flameon-miniatures",
+    "painterName": "Flameon Miniatures",
+    "source": "YouTube",
+    "title": "Razek Godblessed presentation",
+    "url": "https://www.youtube.com/watch?v=q4mplHpUyMQ",
+    "thumbnail": "https://i.ytimg.com/vi/q4mplHpUyMQ/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-3NkyGpBHjJA",
+    "painterId": "flameon-miniatures",
+    "painterName": "Flameon Miniatures",
+    "source": "YouTube",
+    "title": "Khagra presentation",
+    "url": "https://www.youtube.com/watch?v=3NkyGpBHjJA",
+    "thumbnail": "https://i.ytimg.com/vi/3NkyGpBHjJA/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-Ateee5mW-lk",
+    "painterId": "flameon-miniatures",
+    "painterName": "Flameon Miniatures",
+    "source": "YouTube",
+    "title": "Dour Cragan presentation",
+    "url": "https://www.youtube.com/watch?v=Ateee5mW-lk",
+    "thumbnail": "https://i.ytimg.com/vi/Ateee5mW-lk/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-uuXQZ5aXpzQ",
+    "painterId": "flameon-miniatures",
+    "painterName": "Flameon Miniatures",
+    "source": "YouTube",
+    "title": "How to paint a dead tree: a Warhammer miniatures tutorial",
+    "url": "https://www.youtube.com/watch?v=uuXQZ5aXpzQ",
+    "thumbnail": "https://i.ytimg.com/vi/uuXQZ5aXpzQ/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-WOidXJbDkXs",
+    "painterId": "craftworld-studio",
+    "painterName": "Craftworld Studio",
+    "source": "YouTube",
+    "title": "Sin Eater NMM Tutorial is at Patreon!",
+    "url": "https://www.youtube.com/watch?v=WOidXJbDkXs",
+    "thumbnail": "https://i.ytimg.com/vi/WOidXJbDkXs/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "NMM",
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-fsbFZ6TZshY",
+    "painterId": "craftworld-studio",
+    "painterName": "Craftworld Studio",
+    "source": "YouTube",
+    "title": "How to make gaming base for TC Sin Eater is at Patreon",
+    "url": "https://www.youtube.com/watch?v=fsbFZ6TZshY",
+    "thumbnail": "https://i.ytimg.com/vi/fsbFZ6TZshY/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-05vnAZhypX8",
+    "painterId": "craftworld-studio",
+    "painterName": "Craftworld Studio",
+    "source": "YouTube",
+    "title": "Introduction to a new series - EOP Dwomo Kadan Exemplar",
+    "url": "https://www.youtube.com/watch?v=05vnAZhypX8",
+    "thumbnail": "https://i.ytimg.com/vi/05vnAZhypX8/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-VEp920OPCWc",
+    "painterId": "craftworld-studio",
+    "painterName": "Craftworld Studio",
+    "source": "YouTube",
+    "title": "Teaser- Dwomo Kadan Exampler Series - NMM | Upcoming Video Tutorial",
+    "url": "https://www.youtube.com/watch?v=VEp920OPCWc",
+    "thumbnail": "https://i.ytimg.com/vi/VEp920OPCWc/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "NMM",
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-yUNfesI0lFU",
+    "painterId": "craftworld-studio",
+    "painterName": "Craftworld Studio",
+    "source": "YouTube",
+    "title": "How to Paint Seraphon for Warhammer Age of Sigmar: Golden NMM, Volumes, and Light Placement",
+    "url": "https://www.youtube.com/watch?v=yUNfesI0lFU",
+    "thumbnail": "https://i.ytimg.com/vi/yUNfesI0lFU/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "NMM",
+      "Gold",
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-V5_9JIZ50WE",
+    "painterId": "craftworld-studio",
+    "painterName": "Craftworld Studio",
+    "source": "YouTube",
+    "title": "How to Paint Seraphon for Warhammer Age of Sigmar: Underpainting, Wet Blending & Overlapping Layers",
+    "url": "https://www.youtube.com/watch?v=V5_9JIZ50WE",
+    "thumbnail": "https://i.ytimg.com/vi/V5_9JIZ50WE/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-JHXOq5XXH_4",
+    "painterId": "craftworld-studio",
+    "painterName": "Craftworld Studio",
+    "source": "YouTube",
+    "title": "Trisht The Steadfast - Painting Tutorial & Lesson - Era of Providence",
+    "url": "https://www.youtube.com/watch?v=JHXOq5XXH_4",
+    "thumbnail": "https://i.ytimg.com/vi/JHXOq5XXH_4/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-6mUIRxaHqAM",
+    "painterId": "craftworld-studio",
+    "painterName": "Craftworld Studio",
+    "source": "YouTube",
+    "title": "LIMITED PALETTE = LIMITLESS POSSIBILITIES",
+    "url": "https://www.youtube.com/watch?v=6mUIRxaHqAM",
+    "thumbnail": "https://i.ytimg.com/vi/6mUIRxaHqAM/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-wlCX0wkAxns",
+    "painterId": "craftworld-studio",
+    "painterName": "Craftworld Studio",
+    "source": "YouTube",
+    "title": "UNDERPAINTING MINIS & DROP PAINTS - Miniature Painting",
+    "url": "https://www.youtube.com/watch?v=wlCX0wkAxns",
+    "thumbnail": "https://i.ytimg.com/vi/wlCX0wkAxns/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": []
+  },
+  {
+    "id": "yt-Ked7NVBPeWI",
+    "painterId": "craftworld-studio",
+    "painterName": "Craftworld Studio",
+    "source": "YouTube",
+    "title": "NMM Sickle - OVERLAPPING LAYERS & UNDERPAINTING Pt2/2 - EZEKIEL Lessons",
+    "url": "https://www.youtube.com/watch?v=Ked7NVBPeWI",
+    "thumbnail": "https://i.ytimg.com/vi/Ked7NVBPeWI/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "NMM"
+    ]
+  },
+  {
+    "id": "yt-mldstlfsKV0",
+    "painterId": "craftworld-studio",
+    "painterName": "Craftworld Studio",
+    "source": "YouTube",
+    "title": "MINIATURE PAINTING LESSONS - VOLUMES AND FABRICS -HOW TO PAINT PUFF SLEVES - Ezekiel PT2/Preview ONE",
+    "url": "https://www.youtube.com/watch?v=mldstlfsKV0",
+    "thumbnail": "https://i.ytimg.com/vi/mldstlfsKV0/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
+    "id": "yt-S6EZD_G-yvg",
+    "painterId": "craftworld-studio",
+    "painterName": "Craftworld Studio",
+    "source": "YouTube",
+    "title": "NMM Halberd - \"Old\" New Stormcast Series -CWSA Patreon",
+    "url": "https://www.youtube.com/watch?v=S6EZD_G-yvg",
+    "thumbnail": "https://i.ytimg.com/vi/S6EZD_G-yvg/hqdefault.jpg",
+    "publishedAt": null,
+    "tags": [
+      "NMM"
+    ]
+  }
+]
