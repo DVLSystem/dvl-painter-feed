@@ -3,17 +3,21 @@ name: Update Painter Feed
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "17 */6 * * *"
 
 permissions:
   contents: write
 
+concurrency:
+  group: dvl-painter-feed-update
+  cancel-in-progress: false
+
 jobs:
   update-feed:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 15
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -21,23 +25,20 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Backup last known feed
-        run: cp data/feed.json /tmp/feed-before.json || echo '[]' > /tmp/feed-before.json
+      - name: Install YouTube extractor
+        run: python -m pip install --upgrade yt-dlp
 
-      - name: Update multi-source feed
-        run: python scripts/update_sources.py
+      - name: Update feed
+        run: python scripts/update_feed.py
 
-      - name: Recover and refresh YouTube feed
-        run: python scripts/update_youtube_rescue.py /tmp/feed-before.json
-
-      - name: Commit updated feed
+      - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet; then
-            echo "No feed changes"
+          git add data/feed.json data/meta.json
+          if git diff --cached --quiet; then
+            echo "No changes"
             exit 0
           fi
-          git add data/feed.json data/meta.json
           git commit -m "Update painter feed"
           git push
