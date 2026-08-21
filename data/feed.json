@@ -201,6 +201,22 @@
     ]
   },
   {
+    "id": "webmap:angel-giraldez:https-www-angelgiraldez-com-en-categoria-producto-books",
+    "painterId": "angel-giraldez",
+    "source": "Website",
+    "title": "Books archivos - Angel Giraldez",
+    "description": "It takes time to be great. Becoming a master is just the begining",
+    "url": "https://www.angelgiraldez.com/en/categoria-producto/books/",
+    "thumbnail": "",
+    "publishedAt": "2026-06-02T07:33:28Z",
+    "tags": [
+      "Airbrush",
+      "Sci-Fi",
+      "NMM",
+      "Infinity"
+    ]
+  },
+  {
     "id": "webmap:sergio-calvo:https-sergiocalvominiatures-com-product-english-painting-workshop-november-2026",
     "painterId": "sergio-calvo",
     "source": "Website",
@@ -382,6 +398,22 @@
       "Volume",
       "NMM",
       "Capibases"
+    ]
+  },
+  {
+    "id": "webmap:angel-giraldez:https-www-angelgiraldez-com-en-miniature-painting",
+    "painterId": "angel-giraldez",
+    "source": "Website",
+    "title": "Miniature Painting",
+    "description": "Professional custom miniature painting service. Discover a painting studio for Warhammer and wargames, offering high-quality pieces with detailed finishes.",
+    "url": "https://www.angelgiraldez.com/en/miniature-painting/",
+    "thumbnail": "https://www.angelgiraldez.com/wp-content/uploads/2025/01/galeria-pintura-miniaturas-01.webp",
+    "publishedAt": "2024-12-05T09:20:58Z",
+    "tags": [
+      "Airbrush",
+      "Sci-Fi",
+      "NMM",
+      "Infinity"
     ]
   },
   {
