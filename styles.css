@@ -146,20 +146,8 @@ h2,h3,p { margin-top:0; }
 
 /* V4 — gallery view + painter profile drawer */
 .feed-controls { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
-.display-tabs { display:flex; gap:5px; padding-left:10px; border-left:1px solid var(--line); }
-.display-btn { border:0; background:transparent; color:var(--muted); cursor:pointer; padding:7px 9px; border-radius:8px; font-size:11px; font-weight:900; }
-.display-btn.active { color:var(--accent); background:var(--panel-2); }
-.display-btn span { margin-left:3px; }
 
-.feed-list.gallery-view { grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
-.gallery-view .feed-card { display:flex; flex-direction:column; gap:0; padding:0; overflow:hidden; min-width:0; }
-.gallery-view .thumb-wrap { border-radius:0; aspect-ratio:16/10; }
-.gallery-view .card-body { padding:13px; flex:1; }
-.gallery-view .title { font-size:15px; margin:7px 0 7px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-.gallery-view .description { -webkit-line-clamp:2; min-height:37px; }
-.gallery-view .tag-list { margin-top:4px; max-height:48px; overflow:hidden; }
-.gallery-view .card-actions { margin-top:12px; }
-.gallery-view .painter-link { max-width:70%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
 
 .profile-backdrop { position:fixed; inset:0; z-index:60; background:rgba(0,0,0,.48); opacity:0; transition:opacity .18s ease; backdrop-filter:blur(2px); }
 .profile-backdrop.show { opacity:1; }
@@ -197,16 +185,11 @@ h2,h3,p { margin-top:0; }
 .drawer-recent-item small { display:block; margin-top:5px; color:var(--muted); font-size:9px; }
 
 @media (max-width:1180px) {
-  .feed-list.gallery-view { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media (max-width:900px) {
   .feed-controls { width:100%; justify-content:space-between; }
-  .display-tabs { padding-left:0; border-left:0; }
-  .feed-list.gallery-view { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media (max-width:640px) {
-  .feed-list.gallery-view { grid-template-columns:1fr; }
-  .display-btn span { display:none; }
   .profile-drawer { width:100%; }
 }
 
@@ -220,28 +203,6 @@ h2,h3,p { margin-top:0; }
 .source-badge[data-source="artstation"] { background:rgba(0,120,190,.92); }
 .source-badge[data-source="website"] { background:rgba(35,45,55,.92); border:1px solid rgba(255,255,255,.18); }
 
-/* V7 — update status + artwork image gallery */
-.update-status { display:flex; align-items:center; gap:7px; margin-top:11px; color:var(--muted); font-size:10px; }
-.status-dot { width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 3px rgba(212,255,63,.08); }
-.gallery-options { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:14px 14px 0; padding:10px 12px; border:1px solid var(--line); border-radius:12px; background:var(--panel-2); color:var(--muted); font-size:11px; }
-.gallery-options span { color:var(--text); font-weight:900; letter-spacing:.04em; }
-.gallery-options label { display:flex; align-items:center; gap:7px; cursor:pointer; }
-.gallery-options input { accent-color:var(--accent-2); }
-.feed-list.artwork-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
-.image-card { min-width:0; overflow:hidden; border:1px solid var(--line); border-radius:15px; background:var(--panel-2); transition:transform .15s ease,border-color .15s ease; }
-.image-card:hover { transform:translateY(-2px); border-color:var(--accent-2); }
-.image-link { position:relative; display:block; aspect-ratio:1/1; overflow:hidden; background:#090b0e; }
-.gallery-image { width:100%; height:100%; display:block; object-fit:cover; transition:transform .25s ease; }
-.image-card:hover .gallery-image { transform:scale(1.025); }
-.image-overlay { position:absolute; inset:auto 0 0; display:flex; align-items:flex-end; justify-content:space-between; gap:8px; padding:26px 10px 9px; background:linear-gradient(transparent,rgba(0,0,0,.78)); color:#fff; font-size:9px; font-weight:900; }
-.gallery-source { padding:4px 6px; border-radius:6px; background:rgba(0,0,0,.55); letter-spacing:.08em; }
-.gallery-date { color:rgba(255,255,255,.78); font-weight:600; }
-.image-meta { padding:10px 11px 12px; }
-.gallery-painter { border:0; padding:0; background:none; color:var(--accent); cursor:pointer; font-size:10px; font-weight:900; }
-.gallery-title { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin-top:6px; color:var(--text); text-decoration:none; font-size:12px; line-height:1.4; font-weight:800; }
-.gallery-title:hover { text-decoration:underline; }
-@media (max-width:1100px){ .feed-list.artwork-gallery { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-@media (max-width:640px){ .feed-list.artwork-gallery { grid-template-columns:1fr; } .gallery-options { align-items:flex-start; flex-direction:column; } }
 
 /* V8 — stable main navigation + painter manager */
 .manage-btn { border:1px solid var(--line); background:var(--panel-2); color:var(--accent); border-radius:10px; padding:9px 11px; font-size:10px; font-weight:1000; letter-spacing:.08em; cursor:pointer; }
@@ -295,4 +256,4 @@ h2,h3,p { margin-top:0; }
 .manager-status.ok { color:#9fe66b; }
 .manager-status.error { color:#ff8c96; }
 @media (max-width:900px){ .manager-modal{inset:2vh 2vw;padding:14px}.manager-layout{grid-template-columns:1fr}.manager-list-wrap{max-height:220px}.github-grid{grid-template-columns:1fr 1fr}.token-field{grid-column:1/-1} }
-@media (max-width:600px){ .manage-btn{font-size:0}.manage-btn::first-letter{font-size:14px}.form-grid,.github-grid{grid-template-columns:1fr}.form-grid .wide,.token-field{grid-column:auto}.manager-toolbar{display:grid;grid-template-columns:1fr 1fr}.manager-toolbar .primary-btn{grid-column:1/-1}.main-tab{padding:7px 8px}.display-tabs{display:none!important} }
+@media (max-width:600px){ .manage-btn{font-size:0}.manage-btn::first-letter{font-size:14px}.form-grid,.github-grid{grid-template-columns:1fr}.form-grid .wide,.token-field{grid-column:auto}.manager-toolbar{display:grid;grid-template-columns:1fr 1fr}.manager-toolbar .primary-btn{grid-column:1/-1}.main-tab{padding:7px 8px} }

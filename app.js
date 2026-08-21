@@ -1,8 +1,6 @@
 const state = {
   painters: [], feed: [], meta: {}, selectedPainter: null, selectedSource: 'ALL', selectedTag: 'ALL',
   selectedAge: 'ALL', view: 'feed', query: '',
-  display: localStorage.getItem('dvlPainterDisplay') || 'list',
-  includeYoutubeThumbs: localStorage.getItem('dvlIncludeYoutubeThumbs') === 'true',
   saved: new Set(JSON.parse(localStorage.getItem('dvlPainterSaved') || '[]')),
   localPaintersDirty: false
 };
@@ -39,12 +37,12 @@ function freshness(item){ const h=ageHours(item.publishedAt); return h<=24?'NEW'
 function hasImage(item){ return Boolean((item.thumbnail||'').trim()); }
 function activePainterIds(){ return new Set(state.painters.filter(isPainterActive).map(p=>p.id)); }
 
-function renderAll(){ renderMainTabs(); renderPainters(); renderProfile(); renderFilters(); renderFeed(); renderSummary(); renderSourceSummary(); renderDisplayButtons(); renderLastUpdated(); }
+function renderAll(){ renderMainTabs(); renderPainters(); renderProfile(); renderFilters(); renderFeed(); renderSummary(); renderSourceSummary(); renderLastUpdated(); }
 
 function renderMainTabs(){
   document.querySelectorAll('.main-tab').forEach(btn=>btn.classList.toggle('active',btn.dataset.view===state.view));
   const heading = $('#feedStatus');
-  const titles = {feed:'LATEST FEED', gallery:'IMAGE GALLERY', saved:'SAVED REFERENCES'};
+  const titles = {feed:'LATEST FEED', saved:'SAVED REFERENCES'};
   const h = document.querySelector('.feed-heading h3'); if(h) h.textContent=titles[state.view] || 'LATEST FEED';
   if(heading) heading.dataset.view=state.view;
 }
@@ -129,50 +127,30 @@ function baseFilteredFeed(){
     .sort((a,b)=>new Date(b.publishedAt)-new Date(a.publishedAt));
 }
 function filteredFeed(){
-  let rows=baseFilteredFeed();
-  if(state.view==='gallery') rows=rows.filter(hasImage).filter(x=>state.includeYoutubeThumbs || x.source!=='YouTube');
-  return rows;
+  return baseFilteredFeed();
 }
 
 function renderFeed(){
   const list=$('#feedList'); const rows=filteredFeed(); list.innerHTML='';
-  const galleryMode=state.view==='gallery';
-  $('#galleryOptions').classList.toggle('hidden',!galleryMode);
-  $('#displayTabs').classList.toggle('hidden',galleryMode);
-  list.className = galleryMode ? 'feed-list artwork-gallery' : `feed-list ${state.display==='gallery'?'gallery-view':'list-view'}`;
-  if(galleryMode){
-    const tpl=$('#imageCardTemplate');
-    for(const item of rows){
-      const p=painterById(item.painterId)||{name:'Unknown'}; const node=tpl.content.cloneNode(true);
-      const link=node.querySelector('.image-link'); link.href=item.url;
-      const img=node.querySelector('.gallery-image'); img.src=item.thumbnail; img.alt=item.title;
-      img.onerror=()=>node.querySelector('.image-card')?.remove();
-      node.querySelector('.gallery-source').textContent=(item.source||'LINK').toUpperCase();
-      node.querySelector('.gallery-date').textContent=relativeDate(item.publishedAt);
-      const painter=node.querySelector('.gallery-painter'); painter.textContent=p.name; painter.onclick=()=>{state.selectedPainter=item.painterId;renderAll();openProfile();};
-      const title=node.querySelector('.gallery-title'); title.textContent=item.title; title.href=item.url;
-      list.appendChild(node);
-    }
-  } else {
-    const tpl=$('#feedCardTemplate');
-    for(const item of rows){
-      const p=painterById(item.painterId)||{name:'Unknown'}; const node=tpl.content.cloneNode(true); const card=node.querySelector('.feed-card');
-      const thumbWrap=node.querySelector('.thumb-wrap'); const img=node.querySelector('.thumb'); thumbWrap.href=item.url; img.src=item.thumbnail; img.alt=item.title;
-      img.onerror=()=>{img.remove();thumbWrap.classList.add('thumb-fallback');};
-      const sourceBadge=node.querySelector('.source-badge'); sourceBadge.textContent=(item.source||'LINK').toUpperCase(); sourceBadge.dataset.source=(item.source||'Other').toLowerCase();
-      const fresh=freshness(item); const freshBadge=node.querySelector('.fresh-badge'); if(fresh){freshBadge.textContent=fresh;freshBadge.classList.remove('hidden');card.classList.add('is-fresh');}
-      const painterBtn=node.querySelector('.painter-link'); painterBtn.textContent=p.name; painterBtn.onclick=()=>{state.selectedPainter=item.painterId;renderAll();openProfile();};
-      node.querySelector('.date').textContent=relativeDate(item.publishedAt);
-      const title=node.querySelector('.title'); title.textContent=item.title; title.href=item.url;
-      node.querySelector('.description').textContent=item.description||'';
-      node.querySelector('.tag-list').innerHTML=(item.tags||[]).map(t=>`<button class="tag" data-tag="${esc(t)}">#${esc(t)}</button>`).join('');
-      node.querySelectorAll('.tag').forEach(t=>t.onclick=()=>{state.selectedTag=t.dataset.tag;state.view='feed';renderAll();window.scrollTo({top:0,behavior:'smooth'});});
-      const save=node.querySelector('.save-btn'); const isSaved=state.saved.has(item.id); save.textContent=isSaved?'★ SAVED':'☆ SAVE'; save.classList.toggle('saved',isSaved); save.onclick=()=>toggleSave(item.id);
-      node.querySelector('.open-link').href=item.url; list.appendChild(card);
-    }
+  list.className='feed-list list-view';
+  const tpl=$('#feedCardTemplate');
+  for(const item of rows){
+    const p=painterById(item.painterId)||{name:'Unknown'}; const node=tpl.content.cloneNode(true); const card=node.querySelector('.feed-card');
+    const thumbWrap=node.querySelector('.thumb-wrap'); const img=node.querySelector('.thumb'); thumbWrap.href=item.url; img.src=item.thumbnail; img.alt=item.title;
+    img.onerror=()=>{img.remove();thumbWrap.classList.add('thumb-fallback');};
+    const sourceBadge=node.querySelector('.source-badge'); sourceBadge.textContent=(item.source||'LINK').toUpperCase(); sourceBadge.dataset.source=(item.source||'Other').toLowerCase();
+    const fresh=freshness(item); const freshBadge=node.querySelector('.fresh-badge'); if(fresh){freshBadge.textContent=fresh;freshBadge.classList.remove('hidden');card.classList.add('is-fresh');}
+    const painterBtn=node.querySelector('.painter-link'); painterBtn.textContent=p.name; painterBtn.onclick=()=>{state.selectedPainter=item.painterId;renderAll();openProfile();};
+    node.querySelector('.date').textContent=relativeDate(item.publishedAt);
+    const title=node.querySelector('.title'); title.textContent=item.title; title.href=item.url;
+    node.querySelector('.description').textContent=item.description||'';
+    node.querySelector('.tag-list').innerHTML=(item.tags||[]).map(t=>`<button class="tag" data-tag="${esc(t)}">#${esc(t)}</button>`).join('');
+    node.querySelectorAll('.tag').forEach(t=>t.onclick=()=>{state.selectedTag=t.dataset.tag;state.view='feed';renderAll();window.scrollTo({top:0,behavior:'smooth'});});
+    const save=node.querySelector('.save-btn'); const isSaved=state.saved.has(item.id); save.textContent=isSaved?'★ SAVED':'☆ SAVE'; save.classList.toggle('saved',isSaved); save.onclick=()=>toggleSave(item.id);
+    node.querySelector('.open-link').href=item.url; list.appendChild(card);
   }
   $('#emptyState').classList.toggle('hidden',rows.length!==0);
-  $('#feedStatus').textContent=galleryMode?`${rows.length} images`:`${rows.length} items · ${state.feed.length} total`;
+  $('#feedStatus').textContent=`${rows.length} items · ${state.feed.length} total`;
 }
 
 function toggleSave(id){ state.saved.has(id)?state.saved.delete(id):state.saved.add(id); localStorage.setItem('dvlPainterSaved',JSON.stringify([...state.saved])); renderFeed(); renderSummary(); if(state.selectedPainter) renderProfile(); }
@@ -185,12 +163,11 @@ function renderSourceSummary(){
 }
 function renderSummary(){
   const rows=filteredFeed(); const selected=state.selectedPainter&&painterById(state.selectedPainter);
-  const defaultTitle=state.view==='saved'?'저장한 레퍼런스':state.view==='gallery'?'작품 이미지 갤러리':'오늘의 페인팅 업데이트';
+  const defaultTitle=state.view==='saved'?'저장한 레퍼런스':'오늘의 페인팅 업데이트';
   $('#summaryTitle').textContent=selected?`${selected.name} 업데이트`:defaultTitle;
-  $('#summaryText').textContent=selected?(selected.specialties||[]).join(' · '):(state.view==='gallery'?'공식 사이트 등 공개 소스에서 수집된 이미지가 있는 게시물을 모아봅니다.':state.view==='saved'?'직접 저장해 둔 레퍼런스만 모아봅니다.':'YouTube와 공식 사이트의 최신 업데이트를 한곳에서 확인하세요.');
+  $('#summaryText').textContent=selected?(selected.specialties||[]).join(' · '):(state.view==='saved'?'직접 저장해 둔 레퍼런스만 모아봅니다.':'YouTube와 공식 사이트의 최신 업데이트를 한곳에서 확인하세요.');
   $('#newCount').textContent=rows.filter(x=>ageHours(x.publishedAt)<=24).length;
 }
-function renderDisplayButtons(){ document.querySelectorAll('.display-btn').forEach(btn=>btn.classList.toggle('active',btn.dataset.display===state.display)); }
 
 // ---- Painter Manager ----
 function slugify(s){ return String(s||'').trim().toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,60); }
@@ -240,11 +217,8 @@ $('#showAllPainters').onclick=()=>{state.selectedPainter=null;closeProfile(false
 $('#refreshBtn').onclick=()=>loadData().catch(showLoadError);
 $('#themeBtn').onclick=()=>{document.body.classList.toggle('light');localStorage.setItem('dvlPainterTheme',document.body.classList.contains('light')?'light':'dark');};
 $('#closeProfileBtn').onclick=()=>closeProfile(true); $('#profileBackdrop').onclick=()=>closeProfile(true);
-$('#includeYoutubeThumbs').checked=state.includeYoutubeThumbs;
-$('#includeYoutubeThumbs').onchange=e=>{state.includeYoutubeThumbs=e.target.checked;localStorage.setItem('dvlIncludeYoutubeThumbs',String(state.includeYoutubeThumbs));renderFeed();renderSummary();};
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){ if($('#profileDrawer').classList.contains('open')) closeProfile(true); if($('#managerModal').classList.contains('open')) closeManager(); }});
 document.querySelectorAll('.main-tab').forEach(t=>t.onclick=()=>{state.view=t.dataset.view;renderAll();});
-document.querySelectorAll('.display-btn').forEach(btn=>btn.onclick=()=>{state.display=btn.dataset.display;localStorage.setItem('dvlPainterDisplay',state.display);renderFeed();renderDisplayButtons();});
 
 $('#managePaintersBtn').onclick=openManager; $('#closeManagerBtn').onclick=closeManager; $('#managerBackdrop').onclick=closeManager;
 $('#addPainterBtn').onclick=resetPainterForm; $('#resetPainterFormBtn').onclick=resetPainterForm;
