@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PFILE = ROOT/"data"/"painters.json"
 FFILE = ROOT/"data"/"feed.json"
 MFILE = ROOT/"data"/"meta.json"
-MAX_PER_SOURCE = 12
+MAX_PER_SOURCE = 30
 UA = "Mozilla/5.0 DVL-Painter-Feed/1.0"
 
 def read_json(p, default):

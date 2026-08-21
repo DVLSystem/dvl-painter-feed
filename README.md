@@ -1,4 +1,4 @@
-# DVL Painter Feed — Clean v1
+# DVL Painter Feed — Clean v1.1 Top 5
 
 A clean rebuild intended to replace the mixed V3–V8 files.
 
@@ -36,3 +36,14 @@ Use a fine-grained token limited to this repository with:
 Repository permissions → Contents → Read and write
 
 The token is sent directly from your browser to GitHub's API for the publish request and is not persisted by this app.
+
+
+## Top 5 painter set
+This build keeps:
+1. Jose Da Vinci
+2. Richard Gray
+3. Sergio Calvo
+4. Angel Giraldez
+5. Flameon Miniatures
+
+`MAX_PER_SOURCE = 30`, so each painter can contribute up to 30 items per enabled source.
