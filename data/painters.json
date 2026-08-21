@@ -158,31 +158,6 @@
     "sources": {}
   },
   {
-    "id": "roman-lappat",
-    "name": "Roman Lappat",
-    "country": "Germany",
-    "specialties": [
-      "Atmosphere",
-      "Diorama",
-      "Storytelling",
-      "Display"
-    ],
-    "youtubeChannelId": "",
-    "youtube": "",
-    "instagram": "https://www.instagram.com/romanlappat.miniatureart/",
-    "patreon": "",
-    "website": "https://www.romanlappat.com/",
-    "sources": {
-      "websiteRssAuto": false,
-      "websiteSitemapAuto": true,
-      "sitemapInclude": [
-        "/miniatures/",
-        "/workshops/",
-        "/downloads/"
-      ]
-    }
-  },
-  {
     "id": "banshee",
     "name": "Alfonso Giraldes · Banshee",
     "country": "Spain",
