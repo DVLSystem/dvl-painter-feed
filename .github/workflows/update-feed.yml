@@ -28,6 +28,6 @@ jobs:
             echo "No feed changes"
             exit 0
           fi
-          git add data/feed.json
+          git add data/feed.json data/meta.json
           git commit -m "Update painter feed"
           git push
