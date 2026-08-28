@@ -1,15 +1,27 @@
 [
   {
+    "id": "yt-Nv5P6j45nSQ",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Paint a Realistic Dragon | Masterclass",
+    "url": "https://www.youtube.com/watch?v=Nv5P6j45nSQ",
+    "thumbnail": "https://i.ytimg.com/vi/Nv5P6j45nSQ/hqdefault.jpg",
+    "publishedAt": "2026-08-27T17:15:27+00:00",
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
     "id": "yt-Q0XEVdQOP2k",
     "painterId": "angel-giraldez",
     "painterName": "Angel Giraldez",
     "source": "YouTube",
-    "title": "How to paint BLACK TEMPLAR ( warhammer 40K)",
+    "title": "How to Paint BLACK TEMPLAR | Pro Painting Techniques",
     "url": "https://www.youtube.com/watch?v=Q0XEVdQOP2k",
     "thumbnail": "https://i.ytimg.com/vi/Q0XEVdQOP2k/hqdefault.jpg",
     "publishedAt": "2026-08-20T17:15:10+00:00",
     "tags": [
-      "Space Marine",
       "Tutorial"
     ]
   },
@@ -1472,21 +1484,6 @@
     "thumbnail": "https://i.ytimg.com/vi/czEnJ_jx2tk/hqdefault.jpg",
     "publishedAt": null,
     "tags": []
-  },
-  {
-    "id": "yt-WcSBxVCbzd0",
-    "painterId": "angel-giraldez",
-    "painterName": "Angel Giraldez",
-    "source": "YouTube",
-    "title": "How to paint Imperial GOLD using True Metallic Metal paints",
-    "url": "https://www.youtube.com/watch?v=WcSBxVCbzd0",
-    "thumbnail": "https://i.ytimg.com/vi/WcSBxVCbzd0/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "Gold",
-      "Steel",
-      "Tutorial"
-    ]
   },
   {
     "id": "yt-43ozZjdvx5g",
