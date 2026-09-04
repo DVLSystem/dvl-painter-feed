@@ -713,11 +713,13 @@
     "painterId": "jose-da-vinci",
     "painterName": "Jose Da Vinci",
     "source": "YouTube",
-    "title": "Como pintar Armas de ENERGÍA (Inifinty miniature)",
+    "title": "How to paint POWER weapons (Infinity miniature)",
     "url": "https://www.youtube.com/watch?v=oVqIwX_KOp4",
     "thumbnail": "https://i.ytimg.com/vi/oVqIwX_KOp4/hqdefault.jpg",
     "publishedAt": null,
-    "tags": []
+    "tags": [
+      "Tutorial"
+    ]
   },
   {
     "id": "yt-MXNZr-rBNS4",
