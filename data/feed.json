@@ -1,5 +1,18 @@
 [
   {
+    "id": "yt-dFF6Oiopi08",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "Why Your OSL Doesn’t Glow | Painting Zeratul – StarCraft",
+    "url": "https://www.youtube.com/watch?v=dFF6Oiopi08",
+    "thumbnail": "https://i.ytimg.com/vi/dFF6Oiopi08/hqdefault.jpg",
+    "publishedAt": "2026-09-05T18:31:18+00:00",
+    "tags": [
+      "OSL"
+    ]
+  },
+  {
     "id": "yt-lvoLupdWtew",
     "painterId": "sergio-calvo",
     "painterName": "Sergio Calvo",
@@ -727,19 +740,6 @@
     "title": "How to paint POWER weapons (Infinity miniature)",
     "url": "https://www.youtube.com/watch?v=oVqIwX_KOp4",
     "thumbnail": "https://i.ytimg.com/vi/oVqIwX_KOp4/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "Tutorial"
-    ]
-  },
-  {
-    "id": "yt-MXNZr-rBNS4",
-    "painterId": "jose-da-vinci",
-    "painterName": "Jose Da Vinci",
-    "source": "YouTube",
-    "title": "Energy Swords in Infinity Miniatures | Step-by-Step Tutorial (English version)",
-    "url": "https://www.youtube.com/watch?v=MXNZr-rBNS4",
-    "thumbnail": "https://i.ytimg.com/vi/MXNZr-rBNS4/hqdefault.jpg",
     "publishedAt": null,
     "tags": [
       "Tutorial"
