@@ -1,5 +1,16 @@
 [
   {
+    "id": "yt-lvoLupdWtew",
+    "painterId": "sergio-calvo",
+    "painterName": "Sergio Calvo",
+    "source": "YouTube",
+    "title": "How Far Can You Take a Miniature? | Relaxing Painting",
+    "url": "https://www.youtube.com/watch?v=lvoLupdWtew",
+    "thumbnail": "https://i.ytimg.com/vi/lvoLupdWtew/hqdefault.jpg",
+    "publishedAt": "2026-09-04T18:30:29+00:00",
+    "tags": []
+  },
+  {
     "id": "yt-HivE3mfu_o8",
     "painterId": "angel-giraldez",
     "painterName": "Angel Giraldez",
@@ -1250,19 +1261,6 @@
     "tags": [
       "Space Marine",
       "Gold"
-    ]
-  },
-  {
-    "id": "yt-MX19zrcQ3Ck",
-    "painterId": "sergio-calvo",
-    "painterName": "Sergio Calvo",
-    "source": "YouTube",
-    "title": "WARHAMMER 40,000 | Painting the miniature from the COLLECTOR'S EDITION of SPACE MARINE 2",
-    "url": "https://www.youtube.com/watch?v=MX19zrcQ3Ck",
-    "thumbnail": "https://i.ytimg.com/vi/MX19zrcQ3Ck/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "Space Marine"
     ]
   },
   {
