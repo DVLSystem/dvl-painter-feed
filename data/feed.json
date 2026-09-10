@@ -1,5 +1,18 @@
 [
   {
+    "id": "yt-5ildmYsJQc4",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Paint NARUTO | Full Tutorial",
+    "url": "https://www.youtube.com/watch?v=5ildmYsJQc4",
+    "thumbnail": "https://i.ytimg.com/vi/5ildmYsJQc4/hqdefault.jpg",
+    "publishedAt": "2026-09-10T17:30:26+00:00",
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
     "id": "yt-dFF6Oiopi08",
     "painterId": "jose-da-vinci",
     "painterName": "Jose Da Vinci",
@@ -1473,19 +1486,6 @@
     "tags": [
       "Ork",
       "Airbrush"
-    ]
-  },
-  {
-    "id": "yt-yMXcGCLLTKA",
-    "painterId": "angel-giraldez",
-    "painterName": "Angel Giraldez",
-    "source": "YouTube",
-    "title": "Apply OSL and Make Your Miniatures Look Amazing!",
-    "url": "https://www.youtube.com/watch?v=yMXcGCLLTKA",
-    "thumbnail": "https://i.ytimg.com/vi/yMXcGCLLTKA/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "OSL"
     ]
   },
   {
