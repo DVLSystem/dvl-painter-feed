@@ -1,5 +1,16 @@
 [
   {
+    "id": "yt-DMZ6wS4feL8",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "I Painted a MINIATURE TANK Like a REAL WAR MACHINE | StarCraft Siege Tank",
+    "url": "https://www.youtube.com/watch?v=DMZ6wS4feL8",
+    "thumbnail": "https://i.ytimg.com/vi/DMZ6wS4feL8/hqdefault.jpg",
+    "publishedAt": "2026-09-19T17:29:38+00:00",
+    "tags": []
+  },
+  {
     "id": "yt-QvYmXDtgLRI",
     "painterId": "angel-giraldez",
     "painterName": "Angel Giraldez",
@@ -753,19 +764,6 @@
     "title": "Learn the Full Miniature Painting Process | Warcrow by Corvus Belli",
     "url": "https://www.youtube.com/watch?v=_Bw4kUrAZJw",
     "thumbnail": "https://i.ytimg.com/vi/_Bw4kUrAZJw/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "Tutorial"
-    ]
-  },
-  {
-    "id": "yt-oVqIwX_KOp4",
-    "painterId": "jose-da-vinci",
-    "painterName": "Jose Da Vinci",
-    "source": "YouTube",
-    "title": "How to paint POWER weapons (Infinity miniature)",
-    "url": "https://www.youtube.com/watch?v=oVqIwX_KOp4",
-    "thumbnail": "https://i.ytimg.com/vi/oVqIwX_KOp4/hqdefault.jpg",
     "publishedAt": null,
     "tags": [
       "Tutorial"
