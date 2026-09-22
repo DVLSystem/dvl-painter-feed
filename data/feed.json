@@ -1,5 +1,18 @@
 [
   {
+    "id": "yt-UDuq2PGiBUg",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Paint a 1920s Chicago Gangster – Suits, Leather & Guns!",
+    "url": "https://www.youtube.com/watch?v=UDuq2PGiBUg",
+    "thumbnail": "https://i.ytimg.com/vi/UDuq2PGiBUg/hqdefault.jpg",
+    "publishedAt": "2026-09-22T17:30:06+00:00",
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
     "id": "yt-DMZ6wS4feL8",
     "painterId": "jose-da-vinci",
     "painterName": "Jose Da Vinci",
@@ -1469,19 +1482,6 @@
     "publishedAt": null,
     "tags": [
       "Airbrush",
-      "Tutorial"
-    ]
-  },
-  {
-    "id": "yt-nx1Ro5c9SeM",
-    "painterId": "angel-giraldez",
-    "painterName": "Angel Giraldez",
-    "source": "YouTube",
-    "title": "How to paint blue using the ADVANCED BSL system",
-    "url": "https://www.youtube.com/watch?v=nx1Ro5c9SeM",
-    "thumbnail": "https://i.ytimg.com/vi/nx1Ro5c9SeM/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
       "Tutorial"
     ]
   },
