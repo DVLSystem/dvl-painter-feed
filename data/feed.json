@@ -1,5 +1,31 @@
 [
   {
+    "id": "yt-078vblZdy6w",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Tone Pro Review - The Good, The Bad and the Ugly!",
+    "url": "https://www.youtube.com/watch?v=078vblZdy6w",
+    "thumbnail": "https://i.ytimg.com/vi/078vblZdy6w/hqdefault.jpg",
+    "publishedAt": "2026-10-09T20:00:10+00:00",
+    "tags": []
+  },
+  {
+    "id": "yt-2SFoRj3nSrM",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to paint TRUE METALLIC METAL using AIRBRUSH + BRUSH",
+    "url": "https://www.youtube.com/watch?v=2SFoRj3nSrM",
+    "thumbnail": "https://i.ytimg.com/vi/2SFoRj3nSrM/hqdefault.jpg",
+    "publishedAt": "2026-10-09T17:15:09+00:00",
+    "tags": [
+      "Steel",
+      "Airbrush",
+      "Tutorial"
+    ]
+  },
+  {
     "id": "yt-dwsmDseKat4",
     "painterId": "angel-giraldez",
     "painterName": "Angel Giraldez",
@@ -1020,17 +1046,6 @@
     ]
   },
   {
-    "id": "yt-x73Yo3S7pgg",
-    "painterId": "richard-gray",
-    "painterName": "Richard Gray",
-    "source": "YouTube",
-    "title": "Quick Resolution Test",
-    "url": "https://www.youtube.com/watch?v=x73Yo3S7pgg",
-    "thumbnail": "https://i.ytimg.com/vi/x73Yo3S7pgg/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": []
-  },
-  {
     "id": "yt-mnd0NDsLVC8",
     "painterId": "sergio-calvo",
     "painterName": "Sergio Calvo",
@@ -1469,20 +1484,6 @@
     "thumbnail": "https://i.ytimg.com/vi/rXh56AXjOvs/hqdefault.jpg",
     "publishedAt": null,
     "tags": []
-  },
-  {
-    "id": "yt-DvvYdnKKP-I",
-    "painterId": "angel-giraldez",
-    "painterName": "Angel Giraldez",
-    "source": "YouTube",
-    "title": "How to paint Emperor’s scythe using True Metallic Metal",
-    "url": "https://www.youtube.com/watch?v=DvvYdnKKP-I",
-    "thumbnail": "https://i.ytimg.com/vi/DvvYdnKKP-I/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "Steel",
-      "Tutorial"
-    ]
   },
   {
     "id": "yt-43ozZjdvx5g",
