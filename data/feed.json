@@ -1,5 +1,19 @@
 [
   {
+    "id": "yt-sFWr8LkO0FA",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "Airbrushing for Beginners: How to Start and Fix Common Problems",
+    "url": "https://www.youtube.com/watch?v=sFWr8LkO0FA",
+    "thumbnail": "https://i.ytimg.com/vi/sFWr8LkO0FA/hqdefault.jpg",
+    "publishedAt": "2026-10-18T15:00:40+00:00",
+    "tags": [
+      "Airbrush",
+      "Tutorial"
+    ]
+  },
+  {
     "id": "yt-078vblZdy6w",
     "painterId": "richard-gray",
     "painterName": "Richard Gray",
@@ -857,19 +871,6 @@
     "publishedAt": null,
     "tags": [
       "Space Marine",
-      "Tutorial"
-    ]
-  },
-  {
-    "id": "yt-_Bw4kUrAZJw",
-    "painterId": "jose-da-vinci",
-    "painterName": "Jose Da Vinci",
-    "source": "YouTube",
-    "title": "Learn the Full Miniature Painting Process | Warcrow by Corvus Belli",
-    "url": "https://www.youtube.com/watch?v=_Bw4kUrAZJw",
-    "thumbnail": "https://i.ytimg.com/vi/_Bw4kUrAZJw/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
       "Tutorial"
     ]
   },
