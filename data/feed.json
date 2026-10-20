@@ -1,5 +1,18 @@
 [
   {
+    "id": "yt-8f9EDqmP5Pw",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "Airbrush + Brush: The Perfect Combo for Sci-Fi Miniatures!",
+    "url": "https://www.youtube.com/watch?v=8f9EDqmP5Pw",
+    "thumbnail": "https://i.ytimg.com/vi/8f9EDqmP5Pw/hqdefault.jpg",
+    "publishedAt": "2026-10-20T17:31:13+00:00",
+    "tags": [
+      "Airbrush"
+    ]
+  },
+  {
     "id": "yt-sFWr8LkO0FA",
     "painterId": "jose-da-vinci",
     "painterName": "Jose Da Vinci",
@@ -1474,17 +1487,6 @@
       "NMM",
       "Tutorial"
     ]
-  },
-  {
-    "id": "yt-rXh56AXjOvs",
-    "painterId": "angel-giraldez",
-    "painterName": "Angel Giraldez",
-    "source": "YouTube",
-    "title": "Paint a Miniature in Under 1 Hour with This Magic Trick",
-    "url": "https://www.youtube.com/watch?v=rXh56AXjOvs",
-    "thumbnail": "https://i.ytimg.com/vi/rXh56AXjOvs/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": []
   },
   {
     "id": "yt-43ozZjdvx5g",
