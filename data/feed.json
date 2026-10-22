@@ -1,5 +1,19 @@
 [
   {
+    "id": "yt-ksZcJD4iJW4",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Paint BASES for Your Warhammer 40K Miniatures",
+    "url": "https://www.youtube.com/watch?v=ksZcJD4iJW4",
+    "thumbnail": "https://i.ytimg.com/vi/ksZcJD4iJW4/hqdefault.jpg",
+    "publishedAt": "2026-10-22T17:30:24+00:00",
+    "tags": [
+      "Space Marine",
+      "Tutorial"
+    ]
+  },
+  {
     "id": "yt-8f9EDqmP5Pw",
     "painterId": "angel-giraldez",
     "painterName": "Angel Giraldez",
@@ -1472,20 +1486,6 @@
     "publishedAt": null,
     "tags": [
       "Airbrush"
-    ]
-  },
-  {
-    "id": "yt-pABvGnwaMGs",
-    "painterId": "angel-giraldez",
-    "painterName": "Angel Giraldez",
-    "source": "YouTube",
-    "title": "How to paint NMM using BSL system ( Advanced level)",
-    "url": "https://www.youtube.com/watch?v=pABvGnwaMGs",
-    "thumbnail": "https://i.ytimg.com/vi/pABvGnwaMGs/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "NMM",
-      "Tutorial"
     ]
   },
   {
