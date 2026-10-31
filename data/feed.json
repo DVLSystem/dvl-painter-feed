@@ -1,5 +1,16 @@
 [
   {
+    "id": "yt-w6oEFPEPfYE",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "The Decisions You Don’t See in Miniature Painting",
+    "url": "https://www.youtube.com/watch?v=w6oEFPEPfYE",
+    "thumbnail": "https://i.ytimg.com/vi/w6oEFPEPfYE/hqdefault.jpg",
+    "publishedAt": "2026-10-31T16:00:11+00:00",
+    "tags": []
+  },
+  {
     "id": "yt-w4ouX-i9OFU",
     "painterId": "angel-giraldez",
     "painterName": "Angel Giraldez",
@@ -915,20 +926,6 @@
     "tags": [
       "Face",
       "Space Marine"
-    ]
-  },
-  {
-    "id": "yt-gJpdvT45UUE",
-    "painterId": "jose-da-vinci",
-    "painterName": "Jose Da Vinci",
-    "source": "YouTube",
-    "title": "How to Paint Salamanders Space Marine | Full Process Tutorial | Warhammer 40K |Featuring Hinomi X1",
-    "url": "https://www.youtube.com/watch?v=gJpdvT45UUE",
-    "thumbnail": "https://i.ytimg.com/vi/gJpdvT45UUE/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "Space Marine",
-      "Tutorial"
     ]
   },
   {
