@@ -1,5 +1,18 @@
 [
   {
+    "id": "yt-Ch2iRJZB2bE",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Paint HALO Miniatures – Easy & Fast!",
+    "url": "https://www.youtube.com/watch?v=Ch2iRJZB2bE",
+    "thumbnail": "https://i.ytimg.com/vi/Ch2iRJZB2bE/hqdefault.jpg",
+    "publishedAt": "2026-11-05T18:15:27+00:00",
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
     "id": "yt-w6oEFPEPfYE",
     "painterId": "jose-da-vinci",
     "painterName": "Jose Da Vinci",
@@ -1473,19 +1486,6 @@
     "publishedAt": null,
     "tags": [
       "Gold",
-      "Tutorial"
-    ]
-  },
-  {
-    "id": "yt-psYmeS9WWDI",
-    "painterId": "angel-giraldez",
-    "painterName": "Angel Giraldez",
-    "source": "YouTube",
-    "title": "How to Paint the Red Terror (Tabletop Level)",
-    "url": "https://www.youtube.com/watch?v=psYmeS9WWDI",
-    "thumbnail": "https://i.ytimg.com/vi/psYmeS9WWDI/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
       "Tutorial"
     ]
   },
