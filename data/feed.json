@@ -1,5 +1,18 @@
 [
   {
+    "id": "yt-QX4PXwG76ys",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Golden Demon 2026 Essen",
+    "url": "https://www.youtube.com/watch?v=QX4PXwG76ys",
+    "thumbnail": "https://i.ytimg.com/vi/QX4PXwG76ys/hqdefault.jpg",
+    "publishedAt": "2026-11-10T18:30:10+00:00",
+    "tags": [
+      "Gold"
+    ]
+  },
+  {
     "id": "yt-Ch2iRJZB2bE",
     "painterId": "angel-giraldez",
     "painterName": "Angel Giraldez",
@@ -1097,20 +1110,6 @@
     "publishedAt": null,
     "tags": [
       "Gold"
-    ]
-  },
-  {
-    "id": "yt-iH0suc0gZCk",
-    "painterId": "richard-gray",
-    "painterName": "Richard Gray",
-    "source": "YouTube",
-    "title": "How to Paint: Snikrot the Ork! (excuse my sore throat)",
-    "url": "https://www.youtube.com/watch?v=iH0suc0gZCk",
-    "thumbnail": "https://i.ytimg.com/vi/iH0suc0gZCk/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "Ork",
-      "Tutorial"
     ]
   },
   {
