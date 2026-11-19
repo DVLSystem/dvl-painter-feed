@@ -1,5 +1,29 @@
 [
   {
+    "id": "yt-MpId2kEMcmo",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "I Used a Laser on My Miniatures. Is That Cheating?",
+    "url": "https://www.youtube.com/watch?v=MpId2kEMcmo",
+    "thumbnail": "https://i.ytimg.com/vi/MpId2kEMcmo/hqdefault.jpg",
+    "publishedAt": "2026-11-19T18:35:14+00:00",
+    "tags": []
+  },
+  {
+    "id": "yt-oadBhJAeNiY",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to paint a RED GUNDAM! 🔴",
+    "url": "https://www.youtube.com/watch?v=oadBhJAeNiY",
+    "thumbnail": "https://i.ytimg.com/vi/oadBhJAeNiY/hqdefault.jpg",
+    "publishedAt": "2026-11-19T18:15:10+00:00",
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
     "id": "yt-wiMfdXLQaGs",
     "painterId": "flameon-miniatures",
     "painterName": "Flameon Miniatures",
@@ -954,20 +978,6 @@
     ]
   },
   {
-    "id": "yt-SpJgy822pEU",
-    "painterId": "jose-da-vinci",
-    "painterName": "Jose Da Vinci",
-    "source": "YouTube",
-    "title": "Unlocking the Most Stunning Face I've Ever Painted! Warhammer Space Marine 2",
-    "url": "https://www.youtube.com/watch?v=SpJgy822pEU",
-    "thumbnail": "https://i.ytimg.com/vi/SpJgy822pEU/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "Face",
-      "Space Marine"
-    ]
-  },
-  {
     "id": "yt-FXmkShlTnCg",
     "painterId": "richard-gray",
     "painterName": "Richard Gray",
@@ -1485,20 +1495,6 @@
     "tags": [
       "NMM",
       "Gold"
-    ]
-  },
-  {
-    "id": "yt-2M7YmO4nRyI",
-    "painterId": "angel-giraldez",
-    "painterName": "Angel Giraldez",
-    "source": "YouTube",
-    "title": "Gold TMM Tutorial Using the BSL System",
-    "url": "https://www.youtube.com/watch?v=2M7YmO4nRyI",
-    "thumbnail": "https://i.ytimg.com/vi/2M7YmO4nRyI/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "Gold",
-      "Tutorial"
     ]
   },
   {
