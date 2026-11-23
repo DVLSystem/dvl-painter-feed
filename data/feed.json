@@ -1,5 +1,16 @@
 [
   {
+    "id": "yt-Wr0jdQdV_FA",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "I Tested the Wildest Tool for Painting on Miniatures",
+    "url": "https://www.youtube.com/watch?v=Wr0jdQdV_FA",
+    "thumbnail": "https://i.ytimg.com/vi/Wr0jdQdV_FA/hqdefault.jpg",
+    "publishedAt": "2026-11-22T21:19:12+00:00",
+    "tags": []
+  },
+  {
     "id": "yt-MpId2kEMcmo",
     "painterId": "jose-da-vinci",
     "painterName": "Jose Da Vinci",
@@ -961,20 +972,6 @@
     "publishedAt": null,
     "tags": [
       "Tutorial"
-    ]
-  },
-  {
-    "id": "yt-NFLBbPYQS0M",
-    "painterId": "jose-da-vinci",
-    "painterName": "Jose Da Vinci",
-    "source": "YouTube",
-    "title": "Unlock Bust Painting Secrets: Hair, OSL, NMM on Large Figure!",
-    "url": "https://www.youtube.com/watch?v=NFLBbPYQS0M",
-    "thumbnail": "https://i.ytimg.com/vi/NFLBbPYQS0M/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "NMM",
-      "OSL"
     ]
   },
   {
