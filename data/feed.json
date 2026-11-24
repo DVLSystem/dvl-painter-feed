@@ -1,5 +1,18 @@
 [
   {
+    "id": "yt-zvKK5ZCyeD0",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "Painting The Mandalorian: From Rough Start to Beskar Steel",
+    "url": "https://www.youtube.com/watch?v=zvKK5ZCyeD0",
+    "thumbnail": "https://i.ytimg.com/vi/zvKK5ZCyeD0/hqdefault.jpg",
+    "publishedAt": "2026-11-24T18:30:39+00:00",
+    "tags": [
+      "Steel"
+    ]
+  },
+  {
     "id": "yt-Wr0jdQdV_FA",
     "painterId": "jose-da-vinci",
     "painterName": "Jose Da Vinci",
@@ -956,19 +969,6 @@
     "title": "Painting a Warcrow Miniature: The Ultimate Step-by-Step Guide",
     "url": "https://www.youtube.com/watch?v=APvF_JDpUeY",
     "thumbnail": "https://i.ytimg.com/vi/APvF_JDpUeY/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "Tutorial"
-    ]
-  },
-  {
-    "id": "yt-HtE3Ax76Dss",
-    "painterId": "jose-da-vinci",
-    "painterName": "Jose Da Vinci",
-    "source": "YouTube",
-    "title": "Zero to Hero: Infinity Miniature Painting Process",
-    "url": "https://www.youtube.com/watch?v=HtE3Ax76Dss",
-    "thumbnail": "https://i.ytimg.com/vi/HtE3Ax76Dss/hqdefault.jpg",
     "publishedAt": null,
     "tags": [
       "Tutorial"
