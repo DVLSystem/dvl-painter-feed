@@ -1,5 +1,18 @@
 [
   {
+    "id": "yt-zU73HqxFRXY",
+    "painterId": "angel-giraldez",
+    "painterName": "Angel Giraldez",
+    "source": "YouTube",
+    "title": "How to Paint an IMPERIAL FIST with a SUPER SIMPLE TRICK! 🟡",
+    "url": "https://www.youtube.com/watch?v=zU73HqxFRXY",
+    "thumbnail": "https://i.ytimg.com/vi/zU73HqxFRXY/hqdefault.jpg",
+    "publishedAt": "2026-11-25T18:15:11+00:00",
+    "tags": [
+      "Tutorial"
+    ]
+  },
+  {
     "id": "yt-zvKK5ZCyeD0",
     "painterId": "jose-da-vinci",
     "painterName": "Jose Da Vinci",
@@ -1478,20 +1491,6 @@
     "publishedAt": null,
     "tags": [
       "Tutorial"
-    ]
-  },
-  {
-    "id": "yt-Eyc0aukO3QU",
-    "painterId": "angel-giraldez",
-    "painterName": "Angel Giraldez",
-    "source": "YouTube",
-    "title": "The Best Way to Paint Gold NMM on Custodes 🟡",
-    "url": "https://www.youtube.com/watch?v=Eyc0aukO3QU",
-    "thumbnail": "https://i.ytimg.com/vi/Eyc0aukO3QU/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "NMM",
-      "Gold"
     ]
   },
   {
