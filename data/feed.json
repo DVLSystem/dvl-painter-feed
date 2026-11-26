@@ -1,5 +1,16 @@
 [
   {
+    "id": "yt-xETMjcCFPGM",
+    "painterId": "jose-da-vinci",
+    "painterName": "Jose Da Vinci",
+    "source": "YouTube",
+    "title": "I Thought Filament 3D Printers Were Useless",
+    "url": "https://www.youtube.com/watch?v=xETMjcCFPGM",
+    "thumbnail": "https://i.ytimg.com/vi/xETMjcCFPGM/hqdefault.jpg",
+    "publishedAt": "2026-11-26T21:24:28+00:00",
+    "tags": []
+  },
+  {
     "id": "yt-zU73HqxFRXY",
     "painterId": "angel-giraldez",
     "painterName": "Angel Giraldez",
@@ -973,19 +984,6 @@
     "thumbnail": "https://i.ytimg.com/vi/2hXJFt3eLDQ/hqdefault.jpg",
     "publishedAt": null,
     "tags": []
-  },
-  {
-    "id": "yt-APvF_JDpUeY",
-    "painterId": "jose-da-vinci",
-    "painterName": "Jose Da Vinci",
-    "source": "YouTube",
-    "title": "Painting a Warcrow Miniature: The Ultimate Step-by-Step Guide",
-    "url": "https://www.youtube.com/watch?v=APvF_JDpUeY",
-    "thumbnail": "https://i.ytimg.com/vi/APvF_JDpUeY/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "Tutorial"
-    ]
   },
   {
     "id": "yt-FXmkShlTnCg",
