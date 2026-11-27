@@ -1,5 +1,16 @@
 [
   {
+    "id": "yt-5CU_SB2mFO4",
+    "painterId": "richard-gray",
+    "painterName": "Richard Gray",
+    "source": "YouTube",
+    "title": "Bonezone 2026 Results",
+    "url": "https://www.youtube.com/watch?v=5CU_SB2mFO4",
+    "thumbnail": "https://i.ytimg.com/vi/5CU_SB2mFO4/hqdefault.jpg",
+    "publishedAt": "2026-11-27T20:30:08+00:00",
+    "tags": []
+  },
+  {
     "id": "yt-xETMjcCFPGM",
     "painterId": "jose-da-vinci",
     "painterName": "Jose Da Vinci",
@@ -28,11 +39,13 @@
     "painterId": "jose-da-vinci",
     "painterName": "Jose Da Vinci",
     "source": "YouTube",
-    "title": "I Spent 30 Hours Painting This 3 cm Mandalorian",
+    "title": "Painting The Mandalorian: From Rough Start to Beskar Steel",
     "url": "https://www.youtube.com/watch?v=zvKK5ZCyeD0",
     "thumbnail": "https://i.ytimg.com/vi/zvKK5ZCyeD0/hqdefault.jpg",
     "publishedAt": "2026-11-24T18:30:39+00:00",
-    "tags": []
+    "tags": [
+      "Steel"
+    ]
   },
   {
     "id": "yt-Wr0jdQdV_FA",
@@ -1126,19 +1139,6 @@
     "publishedAt": null,
     "tags": [
       "Tutorial"
-    ]
-  },
-  {
-    "id": "yt-emjz6pZ62J4",
-    "painterId": "richard-gray",
-    "painterName": "Richard Gray",
-    "source": "YouTube",
-    "title": "My Thoughts on Golden Demon",
-    "url": "https://www.youtube.com/watch?v=emjz6pZ62J4",
-    "thumbnail": "https://i.ytimg.com/vi/emjz6pZ62J4/hqdefault.jpg",
-    "publishedAt": null,
-    "tags": [
-      "Gold"
     ]
   },
   {
